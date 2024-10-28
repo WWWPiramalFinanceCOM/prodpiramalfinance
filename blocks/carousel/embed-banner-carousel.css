@@ -149,9 +149,9 @@
 
 @media screen and (max-width: 1024px) {
   .section.banner-carousel-wrapper.banner-video-carousel .carousel-wrapper .teaser.block.video-component-carousel .background {
-    width: 100%;
+    background-position: top;
     background-size: 100% 100%;
-    object-fit: contain;
+    object-fit: cover;
   }
 
   .section.banner-carousel-wrapper.banner-video-carousel .carousel-wrapper .teaser.block.video-component-carousel .background .foreground {
@@ -195,9 +195,7 @@
 
 @media screen and (max-width: 767px) {
   .section.banner-carousel-wrapper.banner-video-carousel .carousel-wrapper .teaser.block.video-component-carousel .background {
-    object-fit: contain;
     display: block;
-    background-position: top;
   }
 
   .section.banner-carousel-wrapper.banner-video-carousel .carousel-wrapper .teaser.block.video-component-carousel .background .foreground {
@@ -234,7 +232,7 @@
   }
 }
 
-@media screen and (min-width:768px) and (max-width:1024px) {
+/* @media screen and (min-width:768px) and (max-width:1024px) {
   .section.banner-carousel-wrapper.banner-video-carousel .carousel-wrapper .teaser.block.video-component-carousel .background {
     background-size: contain;
     background-position: left;
@@ -247,7 +245,7 @@
   .section.banner-carousel-wrapper.banner-video-carousel .carousel-wrapper .teaser.block.video-component-carousel.stonebrown .background {
     background-color: #a3907c;
   }
-}
+} */
 
 @media (min-width:1025px) and (max-width:1300px) {
   .section.banner-carousel-wrapper.banner-video-carousel .carousel-wrapper .teaser.block.video-component-carousel .background {

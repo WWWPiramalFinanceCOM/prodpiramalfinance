@@ -101,17 +101,23 @@
 
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .front-picture {
   position: absolute;
-  right: 2px;
+  right: 0;
   bottom: 0;
+  padding-right: calc((100% - 1240px) / 2);
 }
-
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background {
   display: flex;
   align-items: center;
   padding: 0;
-  max-width: 1240px;
+  max-width: 100%;
   margin: 0 auto;
   position: relative;
+  padding-left: calc((100% - 1240px) / 2);
+  padding-right: calc((100% - 1240px) / 2);
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-size: 100% 100%;
+  object-fit: cover;
 }
 
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .front-picture img {
@@ -815,6 +821,11 @@
   }
   .section.banner-carousel-wrapper.self-employed-banner .carousel-wrapper .panel-container .teaser.block>.background .front-picture {
     right: 75px;
+  }
+  .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background {
+    background-position: top;
+    background-size: 100% 100%;
+    object-fit: cover;
   }
 }
 

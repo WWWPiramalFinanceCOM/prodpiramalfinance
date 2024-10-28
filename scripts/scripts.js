@@ -75,7 +75,7 @@ export const targetObject = {
   ctaPosition: 'Top Menu Bar',
   ctaPosition: 'Top Menu Bar',
   pageName: pathname[pathname.length - 1] || 'home-page',
-  isTab: window.matchMedia('(max-width: 1024px)').matches,
+  isTab: window.matchMedia('(max-width: 767px)').matches,
 };
 
 export function renderHelper(data, template, callBack) {
