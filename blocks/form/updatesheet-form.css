@@ -23,7 +23,7 @@
     font-size: 2rem;
     font-weight: 700;
     color: var(--orange);
-    font-family: "Nunito-Bold";
+    font-family: Nunito-Bold, sans-serif;
 }
 
 .update-sheet-form .form-wrapper .form form > div label{
@@ -31,7 +31,7 @@
     margin-bottom: 1rem;
     font-size: 1.125rem;
     color: var(--orange);
-    font-family: "Nunito-Medium";
+    font-family: Nunito-Medium, sans-serif;
 }
 
 .section.update-sheet-form .form-wrapper .form form > div:nth-child(2) input,
@@ -40,14 +40,14 @@
     font-size: 18px;
     cursor: pointer;
     font-weight: 500;
-    font-family: "Nunito-Medium";
+    font-family: Nunito-Medium, sans-serif;
 }
 
 .update-sheet-form .form-wrapper .form form > div:nth-child(3) select option{
     width: inherit;
     font-weight: 500;
     padding-top: 10px;
-    font-family: "Nunito-Medium";
+    font-family: Nunito-Medium, sans-serif;
 }
 
 .update-sheet-form .form-wrapper .form form > div:last-child{
@@ -63,7 +63,7 @@
     max-width: unset;
     padding: 12px 10px;
     border-radius: 10px;
-    font-family: "Nunito-Semibold";
+    font-family: Nunito-Semibold, sans-serif;
     background-color: var(--orange);
 }
 
@@ -78,8 +78,7 @@
     background-color: var(--white);
 }
 
-@media screen and (min-width: 900px) {
-
+@media screen and (width >= 900px) {
 .section.update-sheet-form .form-wrapper .form form > div input,
 .section.update-sheet-form .form-wrapper .form form > div select{
     max-width: unset;
@@ -87,8 +86,7 @@
 
 }
 
-@media screen and (min-width: 600px) {
-
+@media screen and (width >= 600px) {
 .section.update-sheet-form .form-wrapper .form form > div input,
 .section.update-sheet-form .form-wrapper .form form > div select{
     max-width: unset;
@@ -96,7 +94,7 @@
 
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
 .update-sheet-form{
     padding: 40px 0;
 } 

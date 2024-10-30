@@ -6,7 +6,6 @@
 }
 
 .personal-loan-green-banner .teaserv2.block a .bg-image{
-    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     align-items: center;
@@ -18,13 +17,14 @@
     padding: 16px;
     
 }
+
 .personal-loan-green-banner .teaserv2.block a:hover{
 text-decoration: none;
 }
 
 .personal-loan-green-banner .teaserv2.block .rte-text-description p{
     color: var(--camarone);
-    font-family: 'Nunito-Regular', sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 38px;
@@ -35,14 +35,14 @@ text-decoration: none;
 
 .personal-loan-green-banner .teaserv2.block .rte-text-description p b,.personal-loan-green-banner .teaserv2.block .rte-text-description p strong{
     color: var(--camarone);
-    font-family: 'Nunito-Bold', sans-serif;
+    font-family: Nunito-Bold, sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 38px;
 }
 
 
-@media screen and (max-width:767px) {
+@media screen and (width <=767px) {
     .personal-loan-green-banner .teaserv2.block .rte-text-description p{
         font-size: 0.875rem;
         line-height: 20px;
@@ -52,13 +52,12 @@ text-decoration: none;
     }
 
     .personal-loan-green-banner .teaserv2-wrapper{
-      padding: 0px 16px;
+      padding: 0 16px;
       margin-bottom: 40px;
       margin-top: 40px;
     }
 
     .personal-loan-green-banner .teaserv2.block a .bg-image{
-        
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -72,7 +71,7 @@ text-decoration: none;
     }
 }
 
-@media (min-width:768px) and (max-width:1024px) {
+@media (width >=768px) and (width <=1024px) {
     .personal-loan-green-banner .teaserv2.block .rte-text-description p {
         width: 77%;
     }

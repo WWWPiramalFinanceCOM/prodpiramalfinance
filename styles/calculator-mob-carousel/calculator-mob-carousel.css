@@ -1,7 +1,7 @@
 .section.calc-mob-carousel-wrapper .default-content-wrapper h2 {
     color: var(--darkcharcoal);
     display: block;
-    font-family: 'Nunito-Extrabold', sans-serif;
+    font-family: Nunito-Extrabold, sans-serif;
     font-size: 2.5rem;
     line-height: 48px;
     padding-bottom: 24px;
@@ -39,7 +39,7 @@
 
 .section.calc-mob-carousel-wrapper .carousel-wrapper .panel-container .teaser.block .background .foreground .long-description .button-container>a {
     color: var(--white);
-    font-family: 'Nunito-Extrabold', sans-serif;
+    font-family: Nunito-Extrabold, sans-serif;
     font-size: 1.25rem;
     line-height: 30px;
     max-width: 15pc;
@@ -54,7 +54,7 @@
     border: 1px solid var(--solitude);
     border-radius: 8px;
     color: var(--white);
-    font-family: 'Nunito-Bold', sans-serif;
+    font-family: Nunito-Bold, sans-serif;
     font-size: 0.875rem;
     min-width: 129px;
     padding: 12px;
@@ -70,7 +70,7 @@
 .section.calc-desktop-carousel-wrapper .default-content-wrapper h2 {
     color: var(--black);
     display: block;
-    font-family: 'Nunito-Extrabold', sans-serif;
+    font-family: Nunito-Extrabold, sans-serif;
     font-size: 2rem;
     font-weight: 800;
     line-height: 40px;
@@ -96,7 +96,7 @@
 
 .section.calc-desktop-carousel-wrapper .carousel-wrapper .panel-container .teaser.block .background .foreground .long-description p {
     color: var(--white);
-    font-family: 'Nunito-Extrabold', sans-serif;
+    font-family: Nunito-Extrabold, sans-serif;
     font-size: 1.25rem;
     font-weight: 800;
     line-height: 30px;
@@ -136,16 +136,16 @@
 
 /* desktop calculator carousel css end */
 
-@media screen and (max-width:1024px) {
+@media screen and (width <=1024px) {
     .section.calc-mob-carousel-wrapper .default-content-wrapper h2 {
         font-size: 2rem;
-        font-family: 'Nunito-Bold', sans-serif;
+        font-family: Nunito-Bold, sans-serif;
         font-weight: 700;
         line-height: 2rem;
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
     .section.calc-mob-carousel-wrapper .default-content-wrapper h2 {
         font-size: 1.5rem;
     }
@@ -185,13 +185,15 @@
     .section.calc-desktop-carousel-wrapper .carousel-wrapper .carousel .carousel-navigation-buttons .slide-next {
         display: none;
     }
+
     .section.calc-desktop-carousel-wrapper .carousel-wrapper .panel-container .teaser.block {
         min-width: unset;
     }
+
     /* desktop calculator carousel css end */
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (width >= 768px) and (width <= 1024px) {
     .section.calc-desktop-carousel-wrapper .carousel-wrapper .carousel {
         margin: 0 38px;
     }
@@ -208,7 +210,8 @@
         min-width: 320px;
     }
 }
-@media  (min-width: 1025px) and (max-width: 1300px){
+
+@media  (width >= 1025px) and (width <= 1300px){
     .section.calc-desktop-carousel-wrapper .carousel-wrapper .panel-container .glider-track{
         gap:16px
     }

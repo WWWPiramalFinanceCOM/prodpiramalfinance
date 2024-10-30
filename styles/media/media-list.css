@@ -5,30 +5,27 @@
 }
 
 .section.press-release-list-wrapper .default-content-wrapper ul>li>a{
-    padding: 0;
-}
-
-.section.press-release-list-wrapper .default-content-wrapper ul>li>a{
     border-radius: unset;
     padding: 14px 40px 14px 14px;
     line-height: 10px;
 }
 
-.section.press-release-list-wrapper .default-content-wrapper ul>li>a:hover>sub{
-    color: var(--white);
-}
-
 .section.press-release-list-wrapper .default-content-wrapper ul>li>a>sub{
-    font-family: 'Nunito-Semibold', sans-serif;
+    font-family: Nunito-Semibold, sans-serif;
     font-size: 0.75rem;
     font-weight: 600;
     line-height: 16px;
     color: var(--black);
 }
 
+.section.press-release-list-wrapper .default-content-wrapper ul>li>a:hover>sub{
+    color: var(--white);
+}
+
+
 .section.press-release-list-wrapper .default-content-wrapper ul>li>a>sub>strong {
     display: block;
-    font-family: 'Nunito-Bold', sans-serif;
+    font-family: Nunito-Bold, sans-serif;
     font-size: 1rem;
     font-weight: 700;
     line-height: 24px;
@@ -38,7 +35,7 @@
     content: none;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
     .section.press-release-list-wrapper .default-content-wrapper ul {
         padding: 0;
     }
@@ -63,7 +60,7 @@
 .section.media-acc-wrapper .accordion-group-wrapper .accordion-group .accordion>details>div>p {
     margin: 0;
     color: var(--darkcharcoal);
-    font-family: 'Nunito-Regular', sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 24px;
@@ -75,7 +72,7 @@
 }
 
 .section.media-acc-wrapper .accordion-group-wrapper .accordion-group .accordion>details>div>ul>li {
-    font-family: 'Nunito-Regular', sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 24px;
@@ -91,14 +88,14 @@
 
 .section.media-acc-wrapper .accordion-group-wrapper .accordion-group .accordion>details>summary::after {
     color: var(--darkcharcoal);
-    font-family: 'Nunito-Bold', sans-serif;
+    font-family: Nunito-Bold, sans-serif;
     line-height: 42px;
     top: 8px;
 }
 
 .section.media-acc-wrapper .accordion-group-wrapper .accordion-group .accordion:first-child>details summary::before {
     content: "\e900";
-    font-family: 'icomoon-media';
+    font-family: icomoon-media, sans-serif;
     position: absolute;
     top: 35%;
     left: 16px;
@@ -108,7 +105,7 @@
 
 .section.media-acc-wrapper .accordion-group-wrapper .accordion-group .accordion:nth-child(2)>details summary::before {
     content: "\e901";
-    font-family: 'icomoon-media-bell';
+    font-family: icomoon-media-bell, sans-serif;
     position: absolute;
     top: 35%;
     left: 16px;
@@ -137,7 +134,7 @@
 
 .section.media-acc-wrapper .accordion-group-wrapper .accordion-group .accordion>details>div>ul>li>a>sub {
     color: var(--text-color);
-    font-family: 'Nunito-Regular', sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 24px;

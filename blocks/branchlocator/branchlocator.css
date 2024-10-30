@@ -16,7 +16,7 @@
     font-size: 1.5rem;
     line-height: 32px;
     color: var(--gradient-gray);
-    font-family: "Nunito-Regular";
+    font-family: Nunito-Regular, sans-serif;
     grid-column: 1 / -1;
     grid-row: 2 / 2;
     width: 60%;
@@ -29,7 +29,7 @@
     margin-bottom: 16px;
     display: inline-block;
     color: var(--darkcharcoal);
-    font-family: "Nunito-Extrabold";
+    font-family: Nunito-Extrabold, sans-serif;
     grid-column: 1 / -1;
     grid-row: 1 / 2;
     width: 60%;
@@ -78,7 +78,7 @@
     position: relative;
     font-size: 0.875rem;
     color: var(--greyishblue);
-    font-family: "Nunito-Bold";
+    font-family: Nunito-Bold, sans-serif;
     border: 1px solid var(--greyishblue);
 }
 
@@ -92,7 +92,7 @@
     display: inline-block;
     padding: 3px;
     transform: rotate(45deg);
-    border-radius: 0 0 2px 0;
+    border-radius: 0 0 2px;
     transition: transform .3s linear;
 }
 
@@ -121,7 +121,7 @@
     font-weight: 400;
     line-height: 16px;
     font-size: 0.75rem;
-    font-family: "Nunito-Regular";
+    font-family: Nunito-Regular, sans-serif;
     border-bottom: 1px solid var(--zinc);
     width: 100%;
 }
@@ -131,7 +131,7 @@
     line-height: 16px;
     font-size: 0.75rem;
     color: var(--zinc);
-    font-family: "Nunito-Regular";
+    font-family: Nunito-Regular, sans-serif;
 }
 
 .section.branchlocator-dropdown .container .dropdown-wrapper .dropdown .dropdown-option-wrapper .option-wrapper{
@@ -147,7 +147,7 @@
     font-weight: 400;
     line-height: 24px;
     color: var(--darkcharcoal);
-    font-family: "Nunito-Regular";
+    font-family: Nunito-Regular, sans-serif;
     padding: 5px 0;
 }
 
@@ -155,7 +155,7 @@
     margin-top: 15px;
 }
 
-/* DropDown Scroll Bar*/
+/* DropDown Scroll Bar */
 .section.branchlocator-dropdown .container .dropdown-wrapper .dropdown .dropdown-option-wrapper::-webkit-scrollbar {
     width: 2px;
     height: 2px;
@@ -172,7 +172,8 @@
 .section.branchlocator-dropdown .container .dropdown-wrapper .dropdown .dropdown-option-wrapper::-webkit-scrollbar-button {
     display: none;
 }
-/* DropDown Scroll Bar*/
+
+/* DropDown Scroll Bar */
 
 /* DropDown CSS */
 
@@ -194,7 +195,7 @@
     line-height: 32px;
     margin-bottom: 16px;
     color: var(--darkcharcoal);
-    font-family: "Nunito-Bold";
+    font-family: Nunito-Bold, sans-serif;
 }
 
 .section.branchlocator-map .container .map-branchinfo-wrapper .branch-info-container .branch-deatils p:nth-child(1),
@@ -202,7 +203,7 @@
     font-weight: 400;
     line-height: 26px;
     font-size: 1.125rem;
-    font-family: "Nunito-Regular";
+    font-family: Nunito-Regular, sans-serif;
     color: var(--darkcharcoal);
 }
 
@@ -221,7 +222,7 @@
     font-size: 0.875rem;
     line-height: 20px;
     color: var(--white);
-    font-family: "Nunito-Bold";
+    font-family: Nunito-Bold, sans-serif;
 }
 
 .section.branchlocator-map .container .map-branchinfo-wrapper .branch-info-container button.btn-locate,
@@ -261,7 +262,7 @@
     font-weight: 700;
     font-size: 1.5rem;
     line-height: 32px;
-    font-family: "Nunito-Bold";
+    font-family: Nunito-Bold, sans-serif;
     color: var(--darkcharcoal);
 }
 
@@ -280,8 +281,7 @@
     border-radius: 16px;
     padding: 18px 24px 24px;
     background-color: var(--white);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.12);
-    -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 4px 12px rgb(0 0 0 / 8%), 0 4px 12px rgb(0 0 0 / 12%);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -291,7 +291,7 @@
     font-weight: 700;
     line-height: 28px;
     font-size: 1.25rem;
-    font-family: "Nunito-Bold";
+    font-family: Nunito-Bold, sans-serif;
     color: var(--darkcharcoal);
 }
 
@@ -302,7 +302,7 @@
     margin-top: 12px;
     font-weight: 400;
     line-height: 24px;
-    font-family: "Nunito-Regular";
+    font-family: Nunito-Regular, sans-serif;
     color: var(--gradient-gray);
 }
 
@@ -314,7 +314,7 @@
     line-height: 24px;
     align-items: center;
     color: var(--gradient-gray);
-    font-family: "Nunito-Regular";
+    font-family: Nunito-Regular, sans-serif;
 }
 
 .section.branchlocator-cards .cards-branches .cards-container .cards-wrapper .card-box .card-gmail span {
@@ -331,7 +331,7 @@
     font-size: 0.875rem;
     color: var(--white);
     display: inline-block;
-    font-family: "Nunito-Bold";
+    font-family: Nunito-Bold, sans-serif;
     background-color: var(--orange);
 }
 
@@ -339,7 +339,7 @@
     text-decoration: none;
 }
 
-@media screen and (min-width:768px) and (max-width: 1024px) {
+@media screen and (width >=768px) and (width <= 1024px) {
     .section.branchlocator-map .container .map-branchinfo-wrapper {
         gap: 90px;
     }
@@ -369,7 +369,7 @@
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
     .section.branch-locater-banner {
         padding: 50px 0 36px;
         min-height: 190px;

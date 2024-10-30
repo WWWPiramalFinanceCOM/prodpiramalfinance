@@ -2,7 +2,7 @@
 .section.eligibility-criteria-wrapper .default-content-wrapper>h2 {
     color: var(--black);
     display: block;
-    font-family: 'Nunito-Extrabold', sans-serif;
+    font-family: Nunito-Extrabold, sans-serif;
     font-size: 2rem;
     font-weight: 800;
     line-height: 48px;
@@ -12,7 +12,7 @@
 .section.eligibility-criteria-wrapper .default-content-wrapper>p {
     color: var(--black);
     display: block;
-    font-family: 'Nunito-Regular', sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 24px;
@@ -20,7 +20,7 @@
 
 .section.eligibility-criteria-wrapper .default-content-wrapper>p>strong {
     color: var(--black);
-    font-family: 'Nunito-Bold',sans-serif;
+    font-family: Nunito-Bold,sans-serif;
     font-size: 1rem;
     font-weight: 700;
     line-height: 24px;
@@ -34,7 +34,7 @@
 .section.eligibility-criteria-wrapper .default-content-wrapper>ul>li strong {
     display: block;
     color: var(--orange);
-    font-family: 'Nunito-Bold', sans-serif;
+    font-family: Nunito-Bold, sans-serif;
     font-size: 1.125rem;
     font-weight: 700;
     line-height: 28px;
@@ -43,7 +43,7 @@
 
 .section.eligibility-criteria-wrapper .default-content-wrapper>ul>li>ul>li strong {
     color: var(--black);
-    font-family: 'Nunito-Regular', sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-size: 1rem;
     font-weight: bold;
     line-height: 24px;
@@ -52,7 +52,7 @@
 
 .section.eligibility-criteria-wrapper .default-content-wrapper>ul>li>ul>li {
     color: var(--darkcharcoal);
-    font-family: 'Nunito-Regular', sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 24px;
@@ -63,7 +63,7 @@
     color: var(--orange);
 }
 
-@media screen and (max-width:767px) {
+@media screen and (width <=767px) {
     .section.eligibility-criteria-wrapper {
         margin-bottom: 40px;
     }
@@ -79,4 +79,5 @@
         line-height: 24px;
     }
 }
+
 /* Eligiblity Criteria Start */

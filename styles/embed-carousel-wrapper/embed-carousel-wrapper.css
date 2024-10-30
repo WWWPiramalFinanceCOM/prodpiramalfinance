@@ -80,13 +80,12 @@
 .section.embed-carousel-wrapper .carousel-wrapper .carousel .panel-container .glider-track .teaser .background .foreground .text .cta {
     background-color: var(--white);
     color: var(--white);
-    box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 5px rgb(255 255 255 / 10%);
     position: absolute;
     left: 50%;
     top: 50%;
     box-sizing: border-box;
     display: block;
-    transform: scale(3);
     width: 50px;
     height: 50px;
     border: 2px solid;
@@ -113,7 +112,7 @@
 
 dialog[open]:has(.modal-content .section.embed-carousel-youtube-video) {
     max-width: 800px;
-    padding: 52px 0 0 0;
+    padding: 52px 0 0;
     border: transparent;
     border-radius: 5px 5px 0 0;
 }
@@ -134,13 +133,13 @@ dialog[open] .modal-content .section.embed-carousel-youtube-video .embed-wrapper
     padding: 0.5rem;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (width <= 576px) {
     dialog[open]:has(.modal-content .section.embed-carousel-youtube-video) {
         width: 95%;
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
     .section.embed-carousel-wrapper .carousel-wrapper .carousel .carousel-navigation-buttons {
         display: none;
     }
@@ -180,7 +179,7 @@ dialog[open] .modal-content .section.embed-carousel-youtube-video .embed-wrapper
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .section.embed-carousel-wrapper .carousel-wrapper .carousel .panel-container .glider-track .teaser .background .foreground .text .cta {
         width: 32px;
         height: 32px;
@@ -200,7 +199,7 @@ dialog[open] .modal-content .section.embed-carousel-youtube-video .embed-wrapper
     }
 } 
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (width >= 768px) and (width <= 1024px) {
     .section.embed-carousel-wrapper .carousel-wrapper {
         padding: 0 56px;
     }
@@ -229,7 +228,7 @@ dialog[open] .modal-content .section.embed-carousel-youtube-video .embed-wrapper
     } 
 }
 
-@media screen and (min-width:1025px) and (max-width: 1300px) {
+@media screen and (width >=1025px) and (width <= 1300px) {
     .section.embed-carousel-wrapper .carousel-wrapper .carousel .panel-container .glider-track .teaser .background .front-picture img {
         min-height: 190px;
     }

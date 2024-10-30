@@ -1,4 +1,4 @@
-/* carousel Banner video comp start*/
+/* carousel Banner video comp start */
 
 .section.banner-carousel-wrapper.banner-video-carousel .carousel-wrapper .teaser.block.video-component-carousel .background {
   background-size: 100%;
@@ -11,6 +11,7 @@
   width: 100%;
   height: 440px;
   margin: 0 auto;
+
   /* padding: 0px 12px; */
   max-width: 1240px;
 }
@@ -39,16 +40,16 @@
   font-weight: 800;
   line-height: 61px;
   color: var(--white);
-  font-family: 'Nunito-Extrabold';
+  font-family: Nunito-Extrabold, sans-serif;
 }
 
 .section.banner-carousel-wrapper.banner-video-carousel .carousel-wrapper .teaser.block.video-component-carousel .background .foreground .text .long-description p:first-child {
-  padding: 5px 5px 0 5px;
+  padding: 5px 5px 0;
 }
 
 .section.banner-carousel-wrapper.banner-video-carousel .carousel-wrapper .teaser.block.video-component-carousel .background .foreground .text .long-description p:first-child {
   margin-bottom: 8px;
-  padding: 0px 5px 5px 5px;
+  padding: 0 5px 5px;
 }
 
 .section.banner-carousel-wrapper.banner-video-carousel .carousel-wrapper .teaser.block.video-component-carousel .background .foreground .text .long-description p.button-container {
@@ -66,7 +67,7 @@
   padding: 14px;
   border-radius: 8px;
   color: var(--white);
-  font-family: 'Nunito-Bold';
+  font-family: Nunito-Bold, sans-serif;
   background-color: var(--orange);
   margin: 0;
   min-width: 159px;
@@ -74,7 +75,7 @@
 
 .sectio .carousel-wrapper .teaser.blockn.video-component-carousel .background .foreground .text .long-description p.button-container a sub {
   color: var(--white);
-  font-family: 'Nunito-Semibold';
+  font-family: Nunito-Semibold, sans-serif;
   font-size: 18px;
   font-weight: 600;
 }
@@ -103,7 +104,7 @@
     vertical-align: top;
     display: inline-block;
     color: var(--greyishblue);
-    font-family: 'Nunito-Bold';
+    font-family: 'Nunito-Bold, sans-serif';
     background-color: var(--white);
     margin-right: 0;
   } */
@@ -139,15 +140,14 @@
 
 .sectio .carousel-wrapper .teaser.blockn.video-component-carousel .carousel {
   overflow: unset;
-  overflow-y: hidden;
-  overflow-x: auto;
+  overflow: auto hidden;
 }
 
 .section.banner-carousel-wrapper .carousel-wrapper .carousel.block .button-container>button.video-component-carousel.selected {
   background-color: var(--white);
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
   .section.banner-carousel-wrapper.banner-video-carousel .carousel-wrapper .teaser.block.video-component-carousel .background {
     width: 100%;
     background-size: 100% 100%;
@@ -155,7 +155,7 @@
   }
 
   .section.banner-carousel-wrapper.banner-video-carousel .carousel-wrapper .teaser.block.video-component-carousel .background .foreground {
-    margin: 0px;
+    margin: 0;
     height: 390px;
     max-width: unset;
   }
@@ -172,14 +172,13 @@
 
   .section.banner-carousel-wrapper.banner-video-carousel .carousel-wrapper .teaser.block.video-component-carousel .background .foreground .text .long-description p.button-container a,
   .section.banner-carousel-wrapper.banner-video-carousel .carousel-wrapper .teaser.block.video-component-carousel .background .foreground .text .long-description p.button-container:last-child a.button {
-    margin-top: 0px;
+    margin-top: 0;
     font-size: 14px;
     font-weight: 700;
-    line-height: 28px;
-    font-family: 'Nunito-Bold';
+    font-family: Nunito-Bold, sans-serif;
     padding: 11px 10px;
     line-height: 22px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     margin-right: 0;
     min-width: 102px;
   }
@@ -193,7 +192,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .section.banner-carousel-wrapper.banner-video-carousel .carousel-wrapper .teaser.block.video-component-carousel .background {
     object-fit: contain;
     display: block;
@@ -201,7 +200,7 @@
   }
 
   .section.banner-carousel-wrapper.banner-video-carousel .carousel-wrapper .teaser.block.video-component-carousel .background .foreground {
-    margin: 0px;
+    margin: 0;
     height: 250px;
     max-width: unset;
     padding: unset;
@@ -220,7 +219,7 @@
   .section.banner-carousel-wrapper.banner-video-carousel .carousel-wrapper .teaser.block.video-component-carousel .background .foreground .text .long-description p:not(p.button-container) {
     font-size: 24px;
     line-height: 29px;
-    font-family: 'Nunito-Extrabold';
+    font-family: Nunito-Extrabold, sans-serif;
   }
 
   .sectio .carousel-wrapper .teaser.blockn.video-component-carousel .background .foreground .text .long-description p.button-container a sub {
@@ -234,7 +233,7 @@
   }
 }
 
-@media screen and (min-width:768px) and (max-width:1024px) {
+@media screen and (width >=768px) and (width <=1024px) {
   .section.banner-carousel-wrapper.banner-video-carousel .carousel-wrapper .teaser.block.video-component-carousel .background {
     background-size: contain;
     background-position: left;
@@ -249,7 +248,7 @@
   }
 }
 
-@media (min-width:1025px) and (max-width:1300px) {
+@media (width >=1025px) and (width <=1300px) {
   .section.banner-carousel-wrapper.banner-video-carousel .carousel-wrapper .teaser.block.video-component-carousel .background {
     height: 529px;
     min-height: 529px;

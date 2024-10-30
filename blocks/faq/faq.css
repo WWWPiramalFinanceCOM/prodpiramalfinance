@@ -3,6 +3,7 @@
   padding: 20px;
   margin: 20px;
 }
+
 .faq.block [aria-hidden="true"] {
   display: none;
 }

@@ -1,5 +1,5 @@
 .branch-description-wrapper .branch-detail-description.block .branch-description-wrapper .branch-heading {
-    font-family: "Nunito-Extrabold";
+    font-family: Nunito-Extrabold, sans-serif;
     font-size: 2rem;
     line-height: 40px;
     color: var(--darkcharcoal);
@@ -11,14 +11,14 @@
 
 .branch-description-wrapper .branch-detail-description.block .branch-description-wrapper .branch-description-content,
 .branch-description-wrapper .branch-detail-description.block .branch-description-wrapper .branch-description-content>span {
-    font-family: "Nunito-Regular";
+    font-family: Nunito-Regular, sans-serif;
     font-size: 1rem;
     line-height: 24px;
     color: var(--darkgrey);
 }
 
 .branch-description-wrapper .branch-detail-description.block .branch-description-wrapper .branch-description-content>strong {
-    font-family: "Nunito-Bold";
+    font-family: Nunito-Bold, sans-serif;
     color: var(--darkcharcoal);
     font-style: normal;
 }
@@ -28,7 +28,7 @@
     font-style: normal;
     color: var(--orange);
     font-size: 1rem;
-    font-family: "Nunito-Bold";
+    font-family: Nunito-Bold, sans-serif;
     font-weight: 700;
     text-decoration: underline;
     margin: unset;
@@ -38,7 +38,7 @@
     border-radius: 0;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
     .branch-description-wrapper .branch-detail-description.block .branch-description-wrapper .branch-heading {
         font-size: 1.5rem;
         line-height: 32px;
@@ -49,7 +49,7 @@
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (width >= 768px) and (width <= 1024px) {
     .branch-description-wrapper .branch-detail-description.block .branch-description-wrapper .branch-heading {
         line-height: 36px;
         font-size: 1.75rem;

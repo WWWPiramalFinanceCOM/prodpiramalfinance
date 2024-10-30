@@ -4,6 +4,7 @@
     border-radius: 7px;
     margin-bottom: 28px;
   }
+
   .tabs::before {
     content: "";
     display: block;
@@ -13,10 +14,12 @@
     position: relative;
     top: 56px;
   }
+
   .tabs .tab-list {
     overflow-x: auto;
     white-space: nowrap;
   }
+
   .tabs .tab-list button.tab-title {
     background: none;
     color: var(--spectrum-gray-700);
@@ -32,14 +35,17 @@
     border-radius: 0;
     position: relative;
   }
+
   .tabs .tab-list button.tab-title:not(:first-child) {
     margin-left: 24px;
   }
-  .tabs .tab-list button.tab-title[aria-selected=true] {
+
+  .tabs .tab-list button.tab-title[aria-selected="true"] {
     color: var(--text-color);
     border-bottom: 2px solid var(--text-color);
     border-radius: 0;
   }
+
   .tabs .tab-content {
     padding: 10.5px 0;
     color: var(--spectrum-gray-800);
@@ -47,24 +53,26 @@
     font-size: var(--exlm-font-size-content);
     font-weight: 400;
   }
+
   .tabs .tab-content .tabpanel {
     display: none;
     margin-bottom: 12px;
   }
+
   .tabs .tab-content .tabpanel.active {
     display: block;
   }
 
   /* tabs inside tabs start */
   .section.tabs-container > .default-content-wrapper h3 {
-    font-family: 'Nunito-Extrabold', sans-serif;
+    font-family: Nunito-Extrabold, sans-serif;
     font-size: 2.5rem;
     line-height: 3pc;
     margin-bottom: 1.4pc;
   }
 
   .section.tabs-container .tabs-wrapper .tab-list button.tab-title {
-      font-family: 'Nunito-Regular',sans-serif;
+      font-family: Nunito-Regular,sans-serif;
       font-size: 1.5rem;
       font-weight: 400;
       line-height: 2pc;
@@ -80,16 +88,16 @@
     padding: unset;
   }
 
-  .section.tabs-container .tabs-wrapper .tab-list button.tab-title[aria-selected=true] {
+  .section.tabs-container .tabs-wrapper .tab-list button.tab-title[aria-selected="true"] {
     border-bottom: 2px solid var(--orange);
     color: var(--orange);
-    font-family: 'Nunito-Extrabold',sans-serif;
+    font-family: Nunito-Extrabold,sans-serif;
     font-weight: 800;
   }
 
   .section.tabs-container .tabs-wrapper .tabs>.tab-content{
     border-radius: 1pc;
-    box-shadow: 0 4px 9pt rgba(51,51,51,.078);
+    box-shadow: 0 4px 9pt rgb(51 51 51 / 7.8%);
     display: block;
     margin: auto auto 24px;
     padding: 24px;
@@ -107,13 +115,13 @@
 
   .section.tabs-container .tabs-wrapper .tabs>.tab-content .tabpanel>ul>li {
     margin-bottom: 1pc;
-    font-family: 'Nunito-Regular',sans-serif;
+    font-family: Nunito-Regular,sans-serif;
     font-size: 1.125rem;
     line-height: 28px;
     list-style-type: disc;
   }
 
-  @media screen and (max-width:768px) {
+  @media screen and (width <=768px) {
     .section.tabs-container > .default-content-wrapper h3 {
       font-size: 1.5rem;
       line-height: 2pc;
@@ -137,4 +145,5 @@
     line-height: 20px;
   }
   }
+
   /* tabs inside tabs end */

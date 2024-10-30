@@ -25,7 +25,7 @@
   position: absolute;
   top: 25%;
   font-size: 1.5rem;
-  font-family: "Nunito-Regular";
+  font-family: Nunito-Regular, sans-serif;
   color: var(--white);
   left: 5%;
 }
@@ -42,8 +42,7 @@
   display: none;
 }
 
-@media screen and (max-width: 767px) {
-
+@media screen and (width <= 767px) {
   .download-piramal-wrapper .default-content-wrapper h4,
   .download-piramal-wrapper .default-content-wrapper p:first-child img,
   .download-piramal-wrapper .default-content-wrapper p:nth-child(3) .download-piramal-wrapper .default-content-wrapper p:nth-child(4),
@@ -68,7 +67,7 @@
     background: var(--orange);
     border-radius: 8px;
     color: var(--white);
-    font-family: "Nunito-Bold", sans-serif;
+    font-family: Nunito-Bold, sans-serif;
     font-size: 0.75rem;
     font-weight: 700;
     line-height: 16px;
@@ -102,7 +101,7 @@
   left: 204px;
   top: 50px;
   font-size: 1.875rem;
-  font-family: "Nunito-Regular";
+  font-family: Nunito-Regular, sans-serif;
   font-weight: 700;
   color: var(--white);
 }
@@ -110,7 +109,7 @@
 .section.download-piramal-wrapper>.default-content-wrapper>h4 {
   margin: 0;
   color: var(--white);
-  font-family: "Nunito-Bold", sans-serif;
+  font-family: Nunito-Bold, sans-serif;
   font-size: 1.875rem;
   font-weight: 700;
   line-height: 36px;
@@ -118,9 +117,9 @@
 }
 
 .section.download-piramal-wrapper>.default-content-wrapper>p {
-  margin: 0px;
+  margin: 0;
   color: var(--white);
-  font-family: "Nunito-Regular", sans-serif;
+  font-family: Nunito-Regular, sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 32px;
@@ -149,7 +148,7 @@
   display: block;
 }
 
-@media screen and (max-width:767px) {
+@media screen and (width <=767px) {
   .section.download-piramal-wrapper div:nth-child(1)>.imgwithlink>.image-href-desktop>a>picture>img {
     height: 176px;
     min-height: 176px;
@@ -169,36 +168,42 @@
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (width >= 768px) and (width <= 1024px) {
   .section.download-piramal-wrapper div:nth-child(1)>.imgwithlink>.image-href-desktop>a>picture>img{
     min-height: 256px;
   }
+
   .section.download-piramal-wrapper>div:nth-child(2){
     top: 34px;
     left: 64px;
   }
+
   .section.download-piramal-wrapper>.default-content-wrapper>h4{
     color: var(--white);
-    font-family: 'Nunito-Bold', sans-serif;
+    font-family: Nunito-Bold, sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 2pc;
   }
+
   .section.download-piramal-wrapper>.default-content-wrapper>p{
     color: var(--white);
-    font-family: 'Nunito-Regular', sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 28px;
   }
+
   .section.download-piramal-wrapper div:nth-child(3){
     top: 146px;
     left: 64px;
   }
+
   .section.download-piramal-wrapper div:nth-child(4){
     top: 146px;
     left: 260px;
   }
+
   .section.download-piramal-wrapper div:nth-child(3)>.imgwithlink>.image-href-mobile>a>picture>img,
   .section.download-piramal-wrapper div:nth-child(4)>.imgwithlink>.image-href-mobile>a>picture>img {
     height: 52px;
@@ -207,7 +212,7 @@
   }
 }
 
-@media screen and (min-width:1025px) and (max-width: 1300px) {
+@media screen and (width >=1025px) and (width <= 1300px) {
   .section.download-piramal-wrapper div:nth-child(3) {
     left: calc((100% - 860px) / 2);
   }

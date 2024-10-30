@@ -199,7 +199,7 @@
   }
   
   /* ----- TABLET ----- */
-  @media (min-width: 600px) {
+  @media (width >= 600px) {
     .section div.detailed-teaser-wrapper {
       /* stretches to window edge, cover section padding */
       margin-left: calc(-1 * var(--space-token-xl));
@@ -258,7 +258,7 @@
     }
   }
   
-  @media (min-width: 1024px) {
+  @media (width >= 1024px) {
     /* switch to left right */
     .detailed-teaser.block .foreground {
       flex-direction: row;

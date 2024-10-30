@@ -1,19 +1,18 @@
-/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+/* !*************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/postcss-loader/src/index.js??ruleSet[1].rules[1].use[2]!./node_modules/sass-loader/dist/cjs.js!./node_modules/glob-import-loader/index.js??ruleSet[1].rules[1].use[4]!./src/main/webpack/clientlibs/productpage/applyloanform/css/applyloanform.scss ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+  \ *************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 .loan-form-sub-parent {
     visibility: hidden;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    height: 100%;
     z-index: 1210;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
     height: 100%;
     display: -webkit-box;
-    display: -ms-flexbox;
+    display: flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -22,25 +21,19 @@
     -ms-flex-pack: center;
     justify-content: center;
     opacity: 1;
-    -webkit-transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-sub-parent {
-        -webkit-transform: translateY(100%);
         transform: translateY(100%);
         width: 100%;
         height: 92vh;
-        -webkit-transition: -webkit-transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
         transition: -webkit-transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
         transition: transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
         transition: transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms, -webkit-transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
         position: fixed;
-        top: auto;
-        left: 0;
-        right: 0;
-        bottom: 0px;
+        inset: auto 0 0;
         max-height: 100%;
         -webkit-box-align: unset;
         -ms-flex-align: unset;
@@ -53,53 +46,49 @@
 
 .loan-form-sub-parent>.cmp-container {
     overflow: hidden;
-    background-color: rgb(255, 255, 255);
-    color: rgba(0, 0, 0, 0.8705882353);
-    -webkit-transition: -webkit-box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    background-color: rgb(255 255 255);
+    color: rgb(0 0 0 / 87.1%);
     transition: -webkit-box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, -webkit-box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     border-radius: 12px;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 11px 15px -7px, rgba(0, 0, 0, 0.14) 0px 24px 38px 3px, rgba(0, 0, 0, 0.12) 0px 9px 46px 8px;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 11px 15px -7px, rgba(0, 0, 0, 0.14) 0px 24px 38px 3px, rgba(0, 0, 0, 0.12) 0px 9px 46px 8px;
+    box-shadow: rgb(0 0 0 / 20%) 0 11px 15px -7px, rgb(0 0 0 / 14%) 0 24px 38px 3px, rgb(0 0 0 / 12%) 0 9px 46px 8px;
     margin: 32px;
     position: relative;
     display: -webkit-box;
-    display: -ms-flexbox;
+    display: flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     max-height: calc(100% - 64px);
     width: 690px;
     max-width: 1200px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-sub-parent>.cmp-container {
         width: 100%;
         margin: 0 auto;
         max-height: unset;
-        border-bottom-left-radius: 0px;
-        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
     }
 }
 
 .loan-form-sub-parent>.cmp-container .loan-form {
     border-radius: 12px;
     overflow: hidden;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 244, 231)), to(rgba(255, 255, 255, 0)));
-    background: linear-gradient(rgb(255, 244, 231) 0%, rgba(255, 255, 255, 0) 100%);
-    -webkit-filter: drop-shadow(rgba(51, 51, 51, 0.07) 0px 0px 8px);
-    filter: drop-shadow(rgba(51, 51, 51, 0.07) 0px 0px 8px);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgb(255 244 231)), to(rgb(255 255 255 / 0%)));
+    background: linear-gradient(rgb(255 244 231) 0%, rgb(255 255 255 / 0%) 100%);
+    filter: drop-shadow(rgb(51 51 51 / 7%) 0 0 8px);
     overflow-y: scroll;
     max-height: 592px;
     height: 100%;
-    padding: 24px 32px 0px;
+    padding: 24px 32px 0;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-sub-parent>.cmp-container .loan-form {
         max-height: 100%;
         background: unset;
@@ -109,26 +98,25 @@
 
 .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container {
     display: -webkit-box;
-    display: -ms-flexbox;
+    display: flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     height: 100%;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container {
-        padding: 24px 16px 0px;
-        background: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 244, 231)), to(rgba(255, 255, 255, 0)));
-        background: linear-gradient(rgb(255, 244, 231) 0%, rgba(255, 255, 255, 0) 100%);
+        padding: 24px 16px 0;
+        background: -webkit-gradient(linear, left top, left bottom, from(rgb(255 244 231)), to(rgb(255 255 255 / 0%)));
+        background: linear-gradient(rgb(255 244 231) 0%, rgb(255 255 255 / 0%) 100%);
     }
 }
 
 .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .loan-form-heading-parent>.cmp-container {
     display: -webkit-box;
-    display: -ms-flexbox;
+    display: flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -143,14 +131,14 @@
     height: 35px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .loan-form-heading-parent>.cmp-container .image:nth-child(1) {
         -ms-flex-preferred-size: 13.2%;
         flex-basis: 13.2%;
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (width >= 768px) and (width <= 1024px) {
     .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .loan-form-heading-parent>.cmp-container .image:nth-child(1) {
         -ms-flex-preferred-size: 6.5%;
         flex-basis: 6.5%;
@@ -170,14 +158,14 @@
     flex-basis: 3.5%;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .loan-form-heading-parent>.cmp-container .image:nth-child(3) {
         -ms-flex-preferred-size: 3%;
         flex-basis: 3%;
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
     .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .loan-form-heading-parent>.cmp-container .image:nth-child(3) {
         -ms-flex-preferred-size: 8%;
         flex-basis: 8%;
@@ -194,14 +182,14 @@
     flex-basis: 89.1%;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .loan-form-heading-parent>.cmp-container .text {
         -ms-flex-preferred-size: 90%;
         flex-basis: 90%;
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
     .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .loan-form-heading-parent>.cmp-container .text {
         -ms-flex-preferred-size: 88%;
         flex-basis: 88%;
@@ -209,7 +197,7 @@
 }
 
 .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .loan-form-heading-parent>.cmp-container .text p {
-    font-family: "Nunito-Bold", sans-serif;
+    font-family: Nunito-Bold, sans-serif;
     font-weight: 700;
     font-size: 1.25rem;
     line-height: 28px;
@@ -223,11 +211,11 @@
     gap: 30px 32px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form {
         margin-top: 24px;
         grid-template-columns: repeat(1, minmax(0, 1fr));
-        gap: 32px 32px;
+        gap: 32px;
     }
 }
 
@@ -235,14 +223,14 @@
     grid-column: span 2;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .loan-form-checkbox {
         grid-column: span 1;
     }
 }
 
 .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .loan-form-checkbox .cmp-form-options--radio .cmp-form-options__legend {
-    font-family: "Nunito-Regular", sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 20px;
@@ -251,17 +239,16 @@
 
 .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .loan-form-checkbox .cmp-form-options--radio .cmp-field-parent-parent {
     display: -webkit-box;
-    display: -ms-flexbox;
+    display: flexbox;
     display: flex;
     gap: 32px;
     padding-top: 8px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .loan-form-checkbox .cmp-form-options--radio .cmp-field-parent-parent {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-        -ms-flex-direction: column;
         flex-direction: column;
     }
 }
@@ -274,7 +261,7 @@
     width: 100%;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .loan-form-checkbox .cmp-form-options--radio .cmp-field-parent-parent .cmp-form-option-parent {
         padding: 7.1px 20px;
     }
@@ -286,7 +273,7 @@
 
 .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .loan-form-checkbox .cmp-form-options--radio .cmp-field-parent-parent .cmp-form-option-parent .cmp-form-options__field-label .cmp-form-input-parent {
     display: -webkit-box;
-    display: -ms-flexbox;
+    display: flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -303,7 +290,7 @@
     outline: none;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .loan-form-checkbox .cmp-form-options--radio .cmp-field-parent-parent .cmp-form-option-parent .cmp-form-options__field-label .cmp-form-input-parent .cmp-form-options__field--radio {
         margin: 0;
     }
@@ -335,10 +322,8 @@
     display: none;
 }
 
-.loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .loan-form-checkbox .cmp-form-options--radio .cmp-field-parent-parent .cmp-form-option-parent .cmp-form-options__field-label .cmp-form-input-parent input[type=radio].cmp-form-options__field--radio {
-    -moz-appearance: none;
+.loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .loan-form-checkbox .cmp-form-options--radio .cmp-field-parent-parent .cmp-form-option-parent .cmp-form-options__field-label .cmp-form-input-parent input[type="radio"].cmp-form-options__field--radio {
     appearance: none;
-    -webkit-appearance: none;
     accent-color: var(--black);
 }
 
@@ -346,14 +331,14 @@
     -ms-flex-preferred-size: 73.9%;
     flex-basis: 73.9%;
     margin-left: 8px;
-    font-family: "Nunito-Bold", sans-serif;
+    font-family: Nunito-Bold, sans-serif;
     font-weight: 700;
     font-size: 1rem;
     line-height: 24px;
-    color: rgba(0, 0, 0, 0.8705882353);
+    color: rgb(0 0 0 / 87.1%);
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (width >= 768px) and (width <= 1024px) {
     .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .loan-form-checkbox .cmp-form-options--radio .cmp-field-parent-parent .cmp-form-option-parent .cmp-form-options__field-label .cmp-form-input-parent .cmp-form-options__field-description {
         -ms-flex-preferred-size: 90.9%;
         flex-basis: 90.9%;
@@ -367,14 +352,14 @@
     width: 36px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (width >= 768px) and (width <= 1024px) {
     .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .loan-form-checkbox .cmp-form-options--radio .cmp-field-parent-parent .cmp-form-option-parent .cmp-form-options__field-label .cmp-form-input-parent .icon {
         -ms-flex-preferred-size: unset;
         flex-basis: unset;
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .loan-form-checkbox .cmp-form-options--radio .cmp-field-parent-parent .cmp-form-option-parent .cmp-form-options__field-label .cmp-form-input-parent .icon {
         height: 39px;
         width: 39px;
@@ -392,16 +377,15 @@
 .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .text .cmp-form-text {
     position: relative;
     display: -webkit-box;
-    display: -ms-flexbox;
+    display: flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
 }
 
 .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .text .cmp-form-text label {
-    font-family: "Nunito-Regular", sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 20px;
@@ -409,7 +393,7 @@
 }
 
 .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .text .cmp-form-text label span {
-    font-family: "Nunito-Regular", sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 20px;
@@ -419,7 +403,7 @@
 .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .text .cmp-form-text .cmp-form-text-parent {
     height: 32px;
     display: -webkit-box;
-    display: -ms-flexbox;
+    display: flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -428,31 +412,28 @@
 }
 
 .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .text .cmp-form-text .cmp-form-text-parent::before {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.4196078431);
-    left: 0px;
-    bottom: 0px;
+    border-bottom: 1px solid rgb(0 0 0 / 42%);
+    left: 0;
+    bottom: 0;
     content: " ";
     position: absolute;
-    right: 0px;
-    -webkit-transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    right: 0;
     transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     pointer-events: none;
 }
 
 .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .text .cmp-form-text .cmp-form-text-parent:hover::before {
-    border-bottom: 2px solid rgba(0, 0, 0, 0.8705882353);
+    border-bottom: 2px solid rgb(0 0 0 / 87.1%);
 }
 
 .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .text .cmp-form-text .cmp-form-text-parent::after {
     border-bottom: 2px solid var(--midnight);
-    left: 0px;
-    bottom: 0px;
+    left: 0;
+    bottom: 0;
     content: "";
     position: absolute;
-    right: 0px;
-    -webkit-transform: scaleX(0);
+    right: 0;
     transform: scaleX(0);
-    -webkit-transition: -webkit-transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
     transition: -webkit-transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
     transition: transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
     transition: transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms, -webkit-transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
@@ -461,11 +442,11 @@
 
 .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .text .cmp-form-text .cmp-form-text-parent:focus-within::before {
     border-bottom-color: var(--midnight);
+
     /* Change to desired color */
 }
 
 .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .text .cmp-form-text .cmp-form-text-parent:focus-within::after {
-    -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }
 
@@ -474,42 +455,15 @@
     background: transparent;
     border: none;
     z-index: 1;
-    font-family: "Nunito-Regular", sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-weight: 400;
     font-size: 1rem;
     line-height: 23px;
-    color: rgba(0, 0, 0, 0.8705882353);
+    color: rgb(0 0 0 / 87.1%);
 }
 
-.loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .text .cmp-form-text .cmp-form-text-parent .cmp-form-text__text::-webkit-input-placeholder {
-    font-family: "Nunito-Regular", sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 23px;
-    color: var(--zinc);
-    opacity: 1;
-}
-
-.loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .text .cmp-form-text .cmp-form-text-parent .cmp-form-text__text::-moz-placeholder {
-    font-family: "Nunito-Regular", sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 23px;
-    color: var(--zinc);
-    opacity: 1;
-}
-
-.loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .text .cmp-form-text .cmp-form-text-parent .cmp-form-text__text:-ms-input-placeholder {
-    font-family: "Nunito-Regular", sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 23px;
-    color: var(--zinc);
-    opacity: 1;
-}
-
-.loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .text .cmp-form-text .cmp-form-text-parent .cmp-form-text__text::-ms-input-placeholder {
-    font-family: "Nunito-Regular", sans-serif;
+.loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .text .cmp-form-text .cmp-form-text-parent .cmp-form-text__text::input-placeholder {
+    font-family: Nunito-Regular, sans-serif;
     font-weight: 400;
     font-size: 1rem;
     line-height: 23px;
@@ -518,7 +472,34 @@
 }
 
 .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .text .cmp-form-text .cmp-form-text-parent .cmp-form-text__text::placeholder {
-    font-family: "Nunito-Regular", sans-serif;
+    font-family: Nunito-Regular, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 23px;
+    color: var(--zinc);
+    opacity: 1;
+}
+
+.loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .text .cmp-form-text .cmp-form-text-parent .cmp-form-text__text:input-placeholder {
+    font-family: Nunito-Regular, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 23px;
+    color: var(--zinc);
+    opacity: 1;
+}
+
+.loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .text .cmp-form-text .cmp-form-text-parent .cmp-form-text__text::input-placeholder {
+    font-family: Nunito-Regular, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 23px;
+    color: var(--zinc);
+    opacity: 1;
+}
+
+.loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .text .cmp-form-text .cmp-form-text-parent .cmp-form-text__text::placeholder {
+    font-family: Nunito-Regular, sans-serif;
     font-weight: 400;
     font-size: 1rem;
     line-height: 23px;
@@ -531,18 +512,18 @@
 }
 
 .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .text .cmp-form-text .cmp-form-text-parent .rupee {
-    font-family: "Nunito-Regular", sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-weight: 400;
     font-size: 1rem;
     line-height: 23px;
-    color: rgba(0, 0, 0, 0.5411764706);
+    color: rgb(0 0 0 / 54.1%);
     margin-right: 8px;
 }
 
 .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .text .cmp-form-text .cmp-form-text-parent .arrowimage {
     width: 37px;
     display: -webkit-box;
-    display: -ms-flexbox;
+    display: flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -567,7 +548,7 @@
     width: 24px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .text .cmp-form-text .cmp-form-text-parent .dobarrow img {
         width: 18px;
         height: 20px;
@@ -590,7 +571,7 @@
     position: absolute;
     top: 32px;
     padding-top: 4px;
-    font-family: "Nunito-Regular", sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-weight: 400;
     font-size: 0.75rem;
     line-height: 16px;
@@ -612,26 +593,26 @@
 }
 
 .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .text .cmp-form-text>.option-form-parent .option-form {
-    padding: 24px 20px 0px;
+    padding: 24px 20px 0;
 }
 
 .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .text .cmp-form-text>.option-form-parent .option-form ul li {
-    padding: 12px 0px 12px 8px;
+    padding: 12px 0 12px 8px;
     cursor: pointer;
-    font-family: "Nunito-Regular", sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-weight: 400;
     font-size: 1rem;
     line-height: 24px;
-    color: rgba(0, 0, 0, 0.8705882353);
+    color: rgb(0 0 0 / 87.1%);
 }
 
 .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form .text .cmp-form-text>.option-form-parent .option-form ul li:nth-child(1) {
-    font-family: "Nunito-Bold", sans-serif;
+    font-family: Nunito-Bold, sans-serif;
     font-weight: 700;
     font-size: 1rem;
     line-height: 24px;
     color: var(--salmon);
-    padding: 12px 0px 12px 0px;
+    padding: 12px 0;
     pointer-events: none;
 }
 
@@ -647,7 +628,7 @@
 .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form-checkbox {
     text-align: center;
     display: -webkit-box;
-    display: -ms-flexbox;
+    display: flexbox;
     display: flex;
     margin-top: 32px;
     -webkit-box-align: center;
@@ -659,7 +640,7 @@
     justify-content: center;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (width >= 768px) and (width <= 1024px) {
     .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form-checkbox {
         -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -668,7 +649,7 @@
 }
 
 .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form-checkbox>.checkboxtext {
-    font-family: "Nunito-Regular", sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 20px;
@@ -678,7 +659,7 @@
 .loan-form-sub-parent>.cmp-container .loan-form>.cmp-container .cmp-form-checkbox>.checkboxtext a {
     padding-left: 8px;
     text-decoration: underline;
-    font-family: "Nunito-Regular", sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 20px;
@@ -702,13 +683,13 @@
 }
 
 .loan-form-sub-parent>.cmp-container>.loan-form-button-container {
-    padding: 0px 32px 32px;
+    padding: 0 32px 32px;
     background: var(--white);
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-sub-parent>.cmp-container>.loan-form-button-container {
-        padding: 0px 16px 0px;
+        padding: 0 16px;
     }
 }
 
@@ -721,13 +702,13 @@
     margin-top: 48px;
     background: var(--coral);
     border-radius: 8px;
-    font-family: "Nunito-Bold", sans-serif;
+    font-family: Nunito-Bold, sans-serif;
     font-weight: 700;
     font-size: 1rem;
     line-height: 20px;
     color: var(--white);
     display: -webkit-box;
-    display: -ms-flexbox;
+    display: flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -737,7 +718,7 @@
     justify-content: center;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-sub-parent>.cmp-container>.loan-form-button-container .cmp-container {
         margin-top: 12px;
         margin-bottom: 12px;
@@ -745,7 +726,7 @@
 }
 
 .loan-form-sub-parent>.cmp-container>.loan-form-button-container .cmp-container .btn-text {
-    font-family: "Nunito-Bold", sans-serif;
+    font-family: Nunito-Bold, sans-serif;
     font-weight: 700;
     font-size: 1rem;
     line-height: 20px;
@@ -756,14 +737,15 @@
     display: none;
     width: 75px;
     aspect-ratio: 6;
+
     --_g: no-repeat radial-gradient(circle closest-side, #fff 90%, #0000);
+
     background: var(--_g) 0% 50%, var(--_g) 50% 50%, var(--_g) 100% 50%;
     background-size: 33.3333333333% 100%;
-    -webkit-animation: l7 1s infinite linear;
     animation: l7 1s infinite linear;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-sub-parent>.cmp-container>.loan-form-button-container .cmp-container .loader {
         width: 38px;
         aspect-ratio: 6;
@@ -773,7 +755,7 @@
 .loan-form-sub-parent>.cmp-container>.loan-form-button-container .cmp-container.loan-form-button-active {
     pointer-events: unset;
     cursor: pointer;
-    background-color: rgb(242, 104, 65);
+    background-color: rgb(242 104 65);
 }
 
 .loan-form-sub-parent>.cmp-container>.loan-form-button-container.loader-initialized .cmp-container .btn-text {
@@ -808,39 +790,39 @@
     width: 297px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
     .loan-form-sub-parent>.cmp-container>.option-form-parent {
         width: 93%;
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (width >= 768px) and (width <= 1024px) {
     .loan-form-sub-parent>.cmp-container>.option-form-parent {
         width: 96%;
     }
 }
 
 .loan-form-sub-parent>.cmp-container>.option-form-parent .option-form {
-    padding: 0px 20px 0px;
+    padding: 0 20px;
 }
 
 .loan-form-sub-parent>.cmp-container>.option-form-parent .option-form ul li {
-    padding: 12px 0px 12px 8px;
+    padding: 12px 0 12px 8px;
     cursor: pointer;
-    font-family: "Nunito-Regular", sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-weight: 400;
     font-size: 1rem;
     line-height: 24px;
-    color: rgba(0, 0, 0, 0.8705882353);
+    color: rgb(0 0 0 / 87.1%);
 }
 
 .loan-form-sub-parent>.cmp-container>.option-form-parent .option-form ul li:nth-child(1) {
-    font-family: "Nunito-Bold", sans-serif;
+    font-family: Nunito-Bold, sans-serif;
     font-weight: 700;
     font-size: 1rem;
     line-height: 24px;
     color: var(--salmon);
-    padding: 12px 0px 12px 0px;
+    padding: 12px 0;
     pointer-events: none;
 }
 
@@ -853,31 +835,24 @@
     border-radius: 4px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form--open {
-        -webkit-transition: -webkit-transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
         transition: -webkit-transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
         transition: transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
         transition: transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms, -webkit-transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
-        -webkit-transform: translate(0) !important;
         transform: translate(0) !important;
     }
 
     .loan-form--close {
-        -webkit-transform: translateY(100%);
         transform: translateY(100%);
     }
 }
 
 .arrowimage.inverted img {
-    -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
 }
 
 .checkspan-child {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     width: 1em;
     height: 1em;
@@ -889,9 +864,6 @@
     position: relative;
     cursor: pointer;
     font-size: 1.375rem;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
 
@@ -922,26 +894,25 @@
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
+.checkmark::after {
     content: "";
     position: absolute;
     display: none;
 }
 
 /* Show the checkmark when checked */
-.checkboxcontainer input:checked~.checkmark:after {
+.checkboxcontainer input:checked~.checkmark::after {
     display: block;
 }
 
 /* Style the checkmark/indicator */
-.checkboxcontainer .checkmark:after {
+.checkboxcontainer .checkmark::after {
     left: 4px;
-    top: 0px;
+    top: 0;
     width: 5px;
     height: 10px;
     border: solid white;
     border-width: 0 2.4px 2.4px 0;
-    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
 }
 
@@ -950,8 +921,6 @@
     width: 45px;
     position: relative;
     cursor: pointer;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
     text-decoration: none;
     border-radius: 50%;
@@ -964,21 +933,18 @@
     width: 18px;
     top: 50%;
     right: 10%;
-    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
 .checkspan:hover {
-    background-color: rgba(25, 118, 210, 0.04);
+    background-color: rgb(25 118 210 / 4%);
 }
 
 .circle {
     width: 45px;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     left: 9px;
     top: 9px;
@@ -986,84 +952,82 @@
 }
 
 .circle.animate {
-    -webkit-animation: expanding 1s linear;
     animation: expanding 1s linear;
 }
 
 .circle.movecircle {
-    -webkit-animation: expanding2 1s linear;
     animation: expanding2 1s linear;
 }
 
-@-webkit-keyframes expanding {
+@keyframes expanding {
     0% {
-        width: 0px;
-        border: 0px solid rgba(0, 0, 0, 0.54);
+        width: 0;
+        border: 0 solid rgb(0 0 0 / 54%);
     }
 
     50% {
         width: 45px;
-        border: 20px solid rgba(25, 118, 210, 0.04);
+        border: 20px solid rgb(25 118 210 / 4%);
     }
 
     100% {
         width: 45px;
-        border: 20px solid rgba(25, 118, 210, 0.04);
+        border: 20px solid rgb(25 118 210 / 4%);
     }
 }
 
 @keyframes expanding {
     0% {
-        width: 0px;
-        border: 0px solid rgba(0, 0, 0, 0.54);
+        width: 0;
+        border: 0 solid rgb(0 0 0 / 54%);
     }
 
     50% {
         width: 45px;
-        border: 20px solid rgba(25, 118, 210, 0.04);
+        border: 20px solid rgb(25 118 210 / 4%);
     }
 
     100% {
         width: 45px;
-        border: 20px solid rgba(25, 118, 210, 0.04);
-    }
-}
-
-@-webkit-keyframes expanding2 {
-    0% {
-        width: 0px;
-        border: 0px solid rgba(0, 0, 0, 0.54);
-    }
-
-    50% {
-        width: 45px;
-        border: 20px solid rgba(25, 118, 210, 0.04);
-    }
-
-    100% {
-        width: 45px;
-        border: 20px solid rgba(25, 118, 210, 0.04);
+        border: 20px solid rgb(25 118 210 / 4%);
     }
 }
 
 @keyframes expanding2 {
     0% {
-        width: 0px;
-        border: 0px solid rgba(0, 0, 0, 0.54);
+        width: 0;
+        border: 0 solid rgb(0 0 0 / 54%);
     }
 
     50% {
         width: 45px;
-        border: 20px solid rgba(25, 118, 210, 0.04);
+        border: 20px solid rgb(25 118 210 / 4%);
     }
 
     100% {
         width: 45px;
-        border: 20px solid rgba(25, 118, 210, 0.04);
+        border: 20px solid rgb(25 118 210 / 4%);
     }
 }
 
-@-webkit-keyframes l7 {
+@keyframes expanding2 {
+    0% {
+        width: 0;
+        border: 0 solid rgb(0 0 0 / 54%);
+    }
+
+    50% {
+        width: 45px;
+        border: 20px solid rgb(25 118 210 / 4%);
+    }
+
+    100% {
+        width: 45px;
+        border: 20px solid rgb(25 118 210 / 4%);
+    }
+}
+
+@keyframes l7 {
     33% {
         background-size: 33.3333333333% 0%, 33.3333333333% 100%, 33.3333333333% 100%;
     }
@@ -1095,7 +1059,7 @@
     height: 446px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-sub-otp>.cmp-container {
         height: 100%;
     }
@@ -1119,14 +1083,10 @@
 }
 
 .loan-form-sub-otp>.cmp-container .loan-form>.cmp-container .loan-form-otp {
-    display: block;
     margin-top: 20px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
@@ -1140,7 +1100,7 @@
     width: 20px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-sub-otp>.cmp-container .loan-form>.cmp-container .loan-form-otp .loan-form-otp-parent .leftarrow {
         height: 16px;
         width: 16px;
@@ -1149,16 +1109,16 @@
 
 .loan-form-sub-otp>.cmp-container .loan-form>.cmp-container .loan-form-otp .loan-form-otp-parent .otphead {
     margin-top: 12px;
-    font-family: "Nunito-Bold", sans-serif;
+    font-family: Nunito-Bold, sans-serif;
     font-weight: 700;
     font-size: 1.125rem;
     line-height: 28px;
-    color: rgba(0, 0, 0, 0.8705882353);
+    color: rgb(0 0 0 / 87.1%);
 }
 
 .loan-form-sub-otp>.cmp-container .loan-form>.cmp-container .loan-form-otp .loan-form-otp-parent .otpsubheadcontainer {
     display: -webkit-box;
-    display: -ms-flexbox;
+    display: flexbox;
     display: flex;
     -webkit-box-align: start;
     -ms-flex-align: start;
@@ -1166,7 +1126,7 @@
     margin-top: 8px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-sub-otp>.cmp-container .loan-form>.cmp-container .loan-form-otp .loan-form-otp-parent .otpsubheadcontainer {
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -1174,7 +1134,7 @@
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (width >= 768px) and (width <= 1024px) {
     .loan-form-sub-otp>.cmp-container .loan-form>.cmp-container .loan-form-otp .loan-form-otp-parent .otpsubheadcontainer {
         -webkit-box-pack: unset;
         -ms-flex-pack: unset;
@@ -1184,14 +1144,14 @@
 }
 
 .loan-form-sub-otp>.cmp-container .loan-form>.cmp-container .loan-form-otp .loan-form-otp-parent .otpsubheadcontainer .otpsubhead {
-    font-family: "Nunito-Regular", sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 20px;
     color: var(--darkgrey);
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-sub-otp>.cmp-container .loan-form>.cmp-container .loan-form-otp .loan-form-otp-parent .otpsubheadcontainer .otpsubhead {
         font-size: 0.875rem;
         line-height: 20px;
@@ -1199,14 +1159,14 @@
 }
 
 .loan-form-sub-otp>.cmp-container .loan-form>.cmp-container .loan-form-otp .loan-form-otp-parent .otpsubheadcontainer .otpsubhead .otp-phone-num {
-    font-family: "Nunito-Regular", sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 20px;
     color: var(--darkgrey);
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-sub-otp>.cmp-container .loan-form>.cmp-container .loan-form-otp .loan-form-otp-parent .otpsubheadcontainer .otpsubhead .otp-phone-num {
         display: block;
         font-size: 0.875rem;
@@ -1214,7 +1174,7 @@
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (width >= 768px) and (width <= 1024px) {
     .loan-form-sub-otp>.cmp-container .loan-form>.cmp-container .loan-form-otp .loan-form-otp-parent .otpsubheadcontainer .otpsubhead .otp-phone-num {
         display: unset;
     }
@@ -1223,7 +1183,7 @@
 .loan-form-sub-otp>.cmp-container .loan-form>.cmp-container .loan-form-otp .loan-form-otp-parent .otpsubheadcontainer .otp-change-num {
     margin-left: 8px;
     cursor: pointer;
-    font-family: "Nunito-Regular", sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 20px;
@@ -1231,7 +1191,7 @@
     text-decoration: underline;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-sub-otp>.cmp-container .loan-form>.cmp-container .loan-form-otp .loan-form-otp-parent .otpsubheadcontainer .otp-change-num {
         margin-left: unset;
     }
@@ -1239,7 +1199,7 @@
 
 .loan-form-sub-otp>.cmp-container .loan-form>.cmp-container .loan-form-otp .loan-form-otp-parent .otpsubsubhead {
     margin-top: 24px;
-    font-family: "Nunito-Bold", sans-serif;
+    font-family: Nunito-Bold, sans-serif;
     font-weight: 700;
     font-size: 0.875rem;
     line-height: 20px;
@@ -1250,7 +1210,7 @@
     position: relative;
     padding-top: 8px;
     display: -webkit-box;
-    display: -ms-flexbox;
+    display: flexbox;
     display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
@@ -1258,31 +1218,28 @@
 }
 
 .loan-form-sub-otp>.cmp-container .loan-form>.cmp-container .loan-form-otp .loan-form-otp-parent .inputotp::before {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.4196078431);
-    left: 0px;
-    bottom: 0px;
+    border-bottom: 1px solid rgb(0 0 0 / 42%);
+    left: 0;
+    bottom: 0;
     content: " ";
     position: absolute;
-    right: 0px;
-    -webkit-transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    right: 0;
     transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     pointer-events: none;
 }
 
 .loan-form-sub-otp>.cmp-container .loan-form>.cmp-container .loan-form-otp .loan-form-otp-parent .inputotp:hover::before {
-    border-bottom: 2px solid rgba(0, 0, 0, 0.8705882353);
+    border-bottom: 2px solid rgb(0 0 0 / 87.1%);
 }
 
 .loan-form-sub-otp>.cmp-container .loan-form>.cmp-container .loan-form-otp .loan-form-otp-parent .inputotp::after {
     border-bottom: 2px solid var(--midnight);
-    left: 0px;
-    bottom: 0px;
+    left: 0;
+    bottom: 0;
     content: "";
     position: absolute;
-    right: 0px;
-    -webkit-transform: scaleX(0);
+    right: 0;
     transform: scaleX(0);
-    -webkit-transition: -webkit-transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
     transition: -webkit-transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
     transition: transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
     transition: transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms, -webkit-transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
@@ -1291,27 +1248,26 @@
 
 .loan-form-sub-otp>.cmp-container .loan-form>.cmp-container .loan-form-otp .loan-form-otp-parent .inputotp:focus-within::before {
     border-bottom-color: var(--midnight);
+
     /* Change to desired color */
 }
 
 .loan-form-sub-otp>.cmp-container .loan-form>.cmp-container .loan-form-otp .loan-form-otp-parent .inputotp:focus-within::after {
-    -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }
 
 .loan-form-sub-otp>.cmp-container .loan-form>.cmp-container .loan-form-otp .loan-form-otp-parent .inputotp input {
-    font-family: "Nunito-Regular", sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-weight: 400;
     font-size: 1rem;
     line-height: 23px;
-    color: rgba(0, 0, 0, 0.8705882353);
-    padding: 4px 0px 5px;
-    border: 0px;
-    -webkit-box-sizing: content-box;
+    color: rgb(0 0 0 / 87.1%);
+    padding: 4px 0 5px;
+    border: 0;
     box-sizing: content-box;
     background: none;
     height: 23px;
-    margin: 0px;
+    margin: 0;
     -webkit-tap-highlight-color: transparent;
     display: block;
     width: 100%;
@@ -1319,7 +1275,7 @@
 }
 
 .loan-form-sub-otp>.cmp-container .loan-form>.cmp-container .loan-form-otp .loan-form-otp-parent .inputotp span {
-    font-family: "Nunito-Regular", sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-weight: 400;
     font-size: 1rem;
     line-height: 23px;
@@ -1331,7 +1287,7 @@
 .loan-form-sub-otp>.cmp-container .loan-form>.cmp-container .loan-form-otp .loan-form-otp-parent .wrongotpmessage {
     display: none;
     padding-top: 4px;
-    font-family: "Nunito-Regular", sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-weight: 400;
     font-size: 0.75rem;
     line-height: 16px;
@@ -1341,7 +1297,7 @@
 .loan-form-sub-otp>.cmp-container .loan-form>.cmp-container .loan-form-otp .loan-form-otp-parent .resendtext {
     margin-top: 8px;
     display: -webkit-box;
-    display: -ms-flexbox;
+    display: flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -1350,7 +1306,7 @@
 }
 
 .loan-form-sub-otp>.cmp-container .loan-form>.cmp-container .loan-form-otp .loan-form-otp-parent .resendtext p {
-    font-family: "Nunito-Regular", sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-weight: 400;
     font-size: 0.75rem;
     line-height: 16px;
@@ -1358,18 +1314,18 @@
 }
 
 .loan-form-sub-otp>.cmp-container .loan-form>.cmp-container .loan-form-otp .loan-form-otp-parent .resendtext button {
-    font-family: "Nunito-Regular", sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-weight: 400;
     font-size: 0.75rem;
     line-height: 16px;
     color: var(--darkgrey);
     background: transparent;
-    border: 0px;
+    border: 0;
     cursor: pointer;
 }
 
 .loan-form-sub-otp>.cmp-container .loan-form>.cmp-container .loan-form-otp .loan-form-otp-parent .resendtext span {
-    font-family: "Nunito-Regular", sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-weight: 400;
     font-size: 0.75rem;
     line-height: 16px;
@@ -1395,7 +1351,7 @@
     display: none;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-success {
         height: 100%;
     }
@@ -1405,10 +1361,10 @@
     height: auto;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-success .cmp-container {
         height: 100%;
-        border-radius: 0px;
+        border-radius: 0;
     }
 }
 
@@ -1416,11 +1372,11 @@
     padding-bottom: 32px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-success .cmp-container .loan-form {
         padding-bottom: 40px;
         max-height: unset;
-        border-radius: 0px;
+        border-radius: 0;
     }
 }
 
@@ -1440,11 +1396,10 @@
 .loan-form-success .cmp-container .loan-form .cmp-container .sucess-form .sucess-form-parent {
     height: 100%;
     display: -webkit-box;
-    display: -ms-flexbox;
+    display: flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -1454,7 +1409,7 @@
 
 .loan-form-success .cmp-container .loan-form .cmp-container .sucess-form .sucess-form-parent .cross {
     display: -webkit-box;
-    display: -ms-flexbox;
+    display: flexbox;
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -1472,7 +1427,7 @@
     width: 295px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-success .cmp-container .loan-form .cmp-container .sucess-form .sucess-form-parent .cross .loansucess {
         margin-top: 100px;
     }
@@ -1490,23 +1445,23 @@
 .loan-form-success .cmp-container .loan-form .cmp-container .sucess-form .sucess-form-parent .loan-request-text {
     padding-top: 24px;
     text-align: center;
-    font-family: "Nunito-Bold", sans-serif;
+    font-family: Nunito-Bold, sans-serif;
     font-weight: 700;
     font-size: 1.25rem;
     line-height: 28px;
-    color: rgba(0, 0, 0, 0.8705882353);
+    color: rgb(0 0 0 / 87.1%);
 }
 
 .loan-form-success .cmp-container .loan-form .cmp-container .sucess-form .sucess-form-parent .qrcode-text {
     padding-top: 8px;
-    font-family: "Nunito-Regular", sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-weight: 400;
     font-size: 1rem;
     line-height: 24px;
     color: var(--darkcharcoal);
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-success .cmp-container .loan-form .cmp-container .sucess-form .sucess-form-parent .qrcode-text {
         display: none;
     }
@@ -1516,7 +1471,7 @@
     padding-top: 12px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-success .cmp-container .loan-form .cmp-container .sucess-form .sucess-form-parent .barcode-parent {
         display: none;
     }
@@ -1531,7 +1486,7 @@
     display: none;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-success .cmp-container .loan-form .cmp-container .sucess-form .sucess-form-parent .mobilescanner {
         display: block;
         position: absolute;
@@ -1540,10 +1495,10 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-success .cmp-container .loan-form .cmp-container .sucess-form .sucess-form-parent .mobilescanner .mobilescannertext {
         display: block;
-        font-family: "Nunito-Regular", sans-serif;
+        font-family: Nunito-Regular, sans-serif;
         font-weight: 400;
         font-size: 0.875rem;
         line-height: 20px;
@@ -1551,18 +1506,15 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-success .cmp-container .loan-form .cmp-container .sucess-form .sucess-form-parent .mobilescanner .mobilebuttons {
-        display: block;
         margin-top: 12px;
         gap: 16px;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-success .cmp-container .loan-form .cmp-container .sucess-form .sucess-form-parent .mobilescanner .mobilebuttons a {
         height: 36.2px;
     }
@@ -1586,7 +1538,7 @@
     display: none;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-request-fail {
         height: 100%;
     }
@@ -1596,24 +1548,24 @@
     min-height: 446px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-request-fail>.cmp-container {
         min-height: unset;
         height: 100%;
-        border-radius: 0px;
+        border-radius: 0;
     }
 }
 
 .loan-form-request-fail>.cmp-container .loan-form {
-    padding: 24px 15px 0px;
+    padding: 24px 15px 0;
     overflow-y: auto;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-request-fail>.cmp-container .loan-form {
         overflow-y: unset;
         padding: unset;
-        border-radius: 0px;
+        border-radius: 0;
     }
 }
 
@@ -1643,7 +1595,7 @@
 
 .loan-form-request-fail>.cmp-container .loan-form .cmp-container .loan-request-fail-form .images {
     display: -webkit-box;
-    display: -ms-flexbox;
+    display: flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -1659,7 +1611,7 @@
     height: 178px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-request-fail>.cmp-container .loan-form .cmp-container .loan-request-fail-form .images .errorimage {
         margin-top: 80px;
     }
@@ -1675,26 +1627,26 @@
     margin-right: 8px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-request-fail>.cmp-container .loan-form .cmp-container .loan-request-fail-form .images .failformcross {
-        margin-right: 0px;
+        margin-right: 0;
     }
 }
 
 .loan-form-request-fail>.cmp-container .loan-form .cmp-container .loan-request-fail-form .main-heading {
     text-align: center;
     padding-top: 24px;
-    font-family: "Nunito-Bold", sans-serif;
+    font-family: Nunito-Bold, sans-serif;
     font-weight: 700;
     font-size: 1.25rem;
     line-height: 28px;
-    color: rgba(0, 0, 0, 0.8705882353);
+    color: rgb(0 0 0 / 87.1%);
 }
 
 .loan-form-request-fail>.cmp-container .loan-form .cmp-container .loan-request-fail-form .main-sub-heading {
     text-align: center;
     padding-top: 8px;
-    font-family: "Nunito-Regular", sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-weight: 400;
     font-size: 1rem;
     line-height: 24px;
@@ -1705,15 +1657,13 @@
     padding: 16px;
     background-color: var(--submidorange);
     display: -webkit-box;
-    display: -ms-flexbox;
+    display: flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    -webkit-column-gap: 8px;
-    -moz-column-gap: 8px;
     column-gap: 8px;
-    margin: 16px 0px 32px;
+    margin: 16px 0 32px;
     border-radius: 8px;
 }
 
@@ -1723,7 +1673,7 @@
 }
 
 .loan-form-request-fail>.cmp-container .loan-form .cmp-container .loan-request-fail-form .redbox p {
-    font-family: "Nunito-Regular", sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-weight: 400;
     font-size: 0.75rem;
     line-height: 16px;
@@ -1734,7 +1684,7 @@
     display: none;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-something-wrong {
         height: 100%;
     }
@@ -1744,31 +1694,31 @@
     min-height: 446px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-something-wrong>.cmp-container {
         min-height: unset;
         height: 100%;
-        border-radius: 0px;
+        border-radius: 0;
     }
 }
 
 .loan-form-something-wrong>.cmp-container .loan-form {
-    padding: 24px 24px 0px;
+    padding: 24px 24px 0;
     overflow-y: auto;
     max-height: unset;
     height: unset;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-something-wrong>.cmp-container .loan-form {
         height: 100%;
         padding: unset;
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
     .loan-form-something-wrong>.cmp-container .loan-form>.cmp-container {
-        padding: 24px 24px 0px;
+        padding: 24px 24px 0;
     }
 }
 
@@ -1794,7 +1744,7 @@
 
 .loan-form-something-wrong>.cmp-container .loan-form>.cmp-container .loan-sw-wrong .images {
     display: -webkit-box;
-    display: -ms-flexbox;
+    display: flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -1810,7 +1760,7 @@
     height: 178px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-something-wrong>.cmp-container .loan-form>.cmp-container .loan-sw-wrong .images .errorimage {
         margin-top: 80px;
     }
@@ -1828,17 +1778,17 @@
 .loan-form-something-wrong>.cmp-container .loan-form>.cmp-container .loan-sw-wrong .main-heading {
     text-align: center;
     padding-top: 24px;
-    font-family: "Nunito-Extrabold", sans-serif;
+    font-family: Nunito-Extrabold, sans-serif;
     font-weight: 800;
     font-size: 1.125rem;
     line-height: 28px;
-    color: rgba(0, 0, 0, 0.8705882353);
+    color: rgb(0 0 0 / 87.1%);
 }
 
 .loan-form-something-wrong>.cmp-container .loan-form>.cmp-container .loan-sw-wrong .main-sub-heading {
     text-align: center;
     padding-top: 8px;
-    font-family: "Nunito-Regular", sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 20px;
@@ -1851,7 +1801,7 @@
 
 .loan-form-something-wrong>.cmp-container .sw-wrong-button-container {
     display: -webkit-box;
-    display: -ms-flexbox;
+    display: flexbox;
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -1870,14 +1820,14 @@
     max-width: 328px;
     width: 100%;
     cursor: pointer;
-    font-family: "Nunito-Bold", sans-serif;
+    font-family: Nunito-Bold, sans-serif;
     font-weight: 700;
     font-size: 1rem;
     line-height: 24px;
     color: var(--white);
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     .loan-form-something-wrong>.cmp-container .sw-wrong-button-container .cmp-container {
         max-width: 100%;
         border-radius: unset;

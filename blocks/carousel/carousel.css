@@ -1,6 +1,6 @@
-@import "../teaser/teaser.css";
-@import "../detailed-teaser/detailed-teaser.css";
-@import "./glider.min.css";
+@import url("../teaser/teaser.css");
+@import url("../detailed-teaser/detailed-teaser.css");
+@import url("./glider.min.css");
 @import url("./embed-banner-carousel.css");
 
 /* carousel wrapper stretches over complete width */
@@ -132,7 +132,7 @@
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-whatsapp-banner .background .foreground .long-description>:where(h1,h2,h3,h4,h5,h6),
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-whatsapp-banner .background .foreground .long-description>:where(h1,h2,h3,h4,h5,h6)>strong {
   color: var(--black);
-  font-family: "Nunito-Extrabold", sans-serif;
+  font-family: Nunito-Extrabold, sans-serif;
   font-size: 3rem;
   font-weight: 800;
   line-height: 60px;
@@ -147,7 +147,7 @@
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-seven>.background .foreground .text .long-description>p,
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.--skyblue>.background .foreground .text .long-description>p {
   color: var(--gradient-gray);
-  font-family: "Nunito-Regular", sans-serif;
+  font-family: Nunito-Regular, sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 32px;
@@ -177,7 +177,7 @@
 
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .foreground .text .short-description>p {
   color: var(--black);
-  font-family: "Nunito-Regular", sans-serif;
+  font-family: Nunito-Regular, sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 32px;
@@ -194,7 +194,7 @@
   background: var(--orange);
   border-radius: 8px;
   color: var(--white);
-  font-family: 'Nunito-Bold', sans-serif;
+  font-family: Nunito-Bold, sans-serif;
   font-size: 1.125rem;
   font-weight: 700;
   line-height: 20px;
@@ -215,7 +215,6 @@
 .section.banner-carousel-wrapper .carousel-wrapper .carousel.block .button-container>button {
   height: 8px;
   width: 8px;
-  opacity: .2;
   border: unset;
   background-color: #858585;
   opacity: 0.3;
@@ -244,7 +243,7 @@
 }
 
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-two>.background .foreground .text .eyebrow {
-  font-family: 'Nunito-Regular', sans-serif;
+  font-family: Nunito-Regular, sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 32px;
@@ -283,7 +282,7 @@
 
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description>ul>li>ul>li {
   color: var(--gradient-gray);
-  font-family: 'Nunito-Regular', sans-serif;
+  font-family: Nunito-Regular, sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 28px;
@@ -291,7 +290,7 @@
 
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description>ul>li>ul>li>a {
   color: var(--greyishblue);
-  font-family: 'Nunito-Bold', sans-serif;
+  font-family: Nunito-Bold, sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 28px;
@@ -346,9 +345,10 @@
 
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-whatsapp-banner .background .foreground .text .cta-image-wrapper .img-with-text-wrap p {
   color: var(--darkcharcoal);
-  font-family: "Nunito-Regular", sans-serif;
+  font-family: Nunito-Regular, sans-serif;
   font-size: 1.125rem;
   line-height: 26px;
+
   /* padding: 8px 64px 0 0; */
   padding-top: 8px;
 }
@@ -452,7 +452,7 @@
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .long-description>:where(h1,h2,h3,h4,h5,h6),
 .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .long-description>:where(h1,h2,h3,h4,h5,h6)>strong {
   color: var(--black);
-  font-family: "Nunito-Extrabold", sans-serif;
+  font-family: Nunito-Extrabold, sans-serif;
   font-size: 3rem;
   font-weight: 800;
   line-height: 60px;
@@ -463,7 +463,7 @@
   display: block;
 }
 
-@media (min-width:1024px) and (max-width:1366px) {
+@media (width >=1024px) and (width <=1366px) {
   .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background .front-picture img {
     width: 312px;
     height: 265px;
@@ -487,7 +487,7 @@
   }
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (width <=1024px) {
   .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block>.background {
     max-width: 100%;
     padding: 0 16px;
@@ -658,33 +658,42 @@
   .section.banner-carousel-wrapper.cities-page-align-banner .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description>ul>li {
     margin-top: 36px;
   }
+
   .section.banner-carousel-wrapper.cities-page-align-banner .carousel-wrapper .panel-container .teaser.block>.background .front-picture {
     bottom: 0;
   }
+
   .section.banner-carousel-wrapper.cities-page-align-banner .carousel-wrapper .carousel .panel-container .teaser {
     min-height: 400px;
   }
+
   .section.banner-carousel-wrapper.capital-loan-banner .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .long-description>p>br {
     display: none;
   }
+
   .section.banner-carousel-wrapper.business-loan-sub-page-banner .carousel-wrapper .panel-container .teaser.block>.background .foreground .text .short-description>ul>li {
     margin-top: 36px;
   }
+
   .section.banner-carousel-wrapper.flexi-loan-banner .carousel-wrapper .panel-container .teaser.block>.background .front-picture img {
     width: 200px;
     height: 138px;
   }
+
   .section.banner-carousel-wrapper.flexi-loan-banner .carousel-wrapper .panel-container .teaser.block>.background .front-picture,
   .section.banner-carousel-wrapper.insta-loan-banner .carousel-wrapper .panel-container .teaser.block>.background .front-picture {
     right: -10px;
   }
+
   .section.banner-carousel-wrapper.insta-loan-banner .carousel-wrapper .panel-container .teaser.block>.background .front-picture img {
     width: 200px;
     height: 152px;
   }
+
   .section.banner-carousel-wrapper.insta-loan-banner .carousel-wrapper .panel-container .teaser.block>.background .front-picture {
     bottom: 0;
   }
+
   .section.banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser.carousel-item.slide-background-light-green,
   .section.banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser.carousel-item.slide-background-light-blue,
   .section.banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser.carousel-item.slide-background-violet {
@@ -707,7 +716,7 @@
   }
 }
 
-@media screen and (max-width:767px) {
+@media screen and (width <=767px) {
   .section.banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser {
     min-height: 440px;
   }
@@ -740,27 +749,32 @@
   .section.banner-carousel-wrapper.capital-loan-banner .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .long-description {
     margin-right: 10px;
   }
+
   .section.banner-carousel-wrapper.self-employed-banner .carousel-wrapper .panel-container .teaser.block>.background .front-picture {
     right: 10px;
   }
+
   .section.banner-carousel-wrapper.business-loan-mob-text-banner .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description>p {
     display: block;
   }
 
   .section.banner-carousel-wrapper.business-loan-mob-text-banner .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description>p {
     color: var(--gradient-gray);
-    font-family: "Nunito-Regular", sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-size: 0.875rem;
     font-weight: 400;
     line-height: 20px;
     margin-top: 12px;
   }
+
   .section.banner-carousel-wrapper.business-loan-mob-text-banner .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .long-description>p {
     display: none;
   }
+
   .banner-carousel-wrapper.business-loan-mob-text-banner .carousel-wrapper .carousel .panel-container .teaser .foreground .long-description {
     margin-top: 0;
   }
+
   /* .banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser .foreground .long-description>p {
       white-space: normal;
   }
@@ -785,7 +799,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (width >= 768px) and (width <= 1024px) {
   .section.banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser {
     min-height: 440px;
   }
@@ -810,9 +824,11 @@
   .section.banner-carousel-wrapper.careers-page-banner .carousel-wrapper .panel-container .teaser.block>.background .front-picture {
     right: 25px;
   }
+
   .banner-carousel-wrapper.capital-loan-banner .carousel-wrapper .carousel .panel-container .teaser .foreground {
     width: 53%;
   }
+
   .section.banner-carousel-wrapper.self-employed-banner .carousel-wrapper .panel-container .teaser.block>.background .front-picture {
     right: 75px;
   }
@@ -821,7 +837,7 @@
 /* homepage top banner carousel css end */
 
 /* ----- TABLET ----- */
-@media (min-width: 600px) {
+@media (width >= 600px) {
   .section div.carousel-wrapper {
     /* stretches to window edge, cover section padding */
     margin-left: calc(-1 * var(--space-token-xl));
@@ -829,14 +845,14 @@
   }
 }
 
-@media (min-width: 600px) {
+@media (width >= 600px) {
   .section.carousel-container {
     padding-top: 0;
     padding-bottom: 0;
   }
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1300px) {
+@media screen and (width >= 1025px) and (width <= 1300px) {
   .section.banner-carousel-wrapper .carousel-wrapper .panel-container .teaser.block.teaser-block-five>.background .foreground {
     width: 52%;
   }
@@ -886,31 +902,39 @@
     object-position: bottom;
     object-fit: contain;
   }
+
   .section.banner-scale-img .carousel-wrapper .carousel .panel-container .teaser .foreground{
     width: 64%;
   }
+
   .section.banner-scale-img  .carousel-wrapper .panel-container .teaser.block>.background .foreground .text .eyebrow{
     padding-top: 60px;
   }
+
   .section.banner-carousel-wrapper.careers-page-banner .carousel-wrapper .panel-container .teaser.block>.background .front-picture img {
     width: 814px;
     height: 394px;
   }
+
   .banner-carousel-wrapper.careers-page-banner .carousel-wrapper .carousel .panel-container .teaser .foreground {
     width: 80%;
     padding-top: 120px;
   }
+
   .section.banner-carousel-wrapper.careers-page-banner .carousel-wrapper .carousel .panel-container .teaser {
     min-height: 627px;
   } 
+
   .section.banner-carousel-wrapper.careers-page-banner .carousel-wrapper .panel-container .teaser.block>.background .front-picture,
   .section.banner-carousel-wrapper.business-loan-sub-page-banner .carousel-wrapper .panel-container .teaser.block>.background .front-picture,
   .section.banner-carousel-wrapper.personal-loan-sub-page-banner .carousel-wrapper .panel-container .teaser.block>.background .front-picture {
     right: 0;
   }
+
   .banner-carousel-wrapper.business-loan-sub-page-banner .carousel-wrapper .carousel .panel-container .teaser .foreground {
     width: 80%;
   }
+
   .section.banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser.carousel-item.slide-background-light-green,
   .section.banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser.carousel-item.slide-background-light-blue,
   .section.banner-carousel-wrapper .carousel-wrapper .carousel .panel-container .teaser.carousel-item.slide-background-violet {
@@ -927,9 +951,11 @@
       width: 100%;
   }
 }
+
 .section.one-lakh-banner-modal .carousel.block>.panel-container{
   overflow: unset;
 }
+
 .section.one-lakh-banner-modal .carousel-wrapper .panel-container .teaser.block>.background{
   object-fit: contain;
   max-width: 100%;
@@ -937,23 +963,26 @@
   background-repeat: no-repeat;
   background-position: top;
 }
+
 .section.one-lakh-banner-modal .carousel-wrapper .panel-container .teaser.block>.background .front-picture img {
   display: none;
 }
 
 .section.one-lakh-banner-modal .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .long-description :where(h1,h2,h3,h4,h5,h6){
   color: white;
-  font-family: 'Nunito-Extrabold';
+  font-family: Nunito-Extrabold, sans-serif;
   font-weight: 800;
   word-wrap: break-word;
   font-size: 3.5rem;
   line-height: 68px;
 }
+
 .section.one-lakh-banner-modal .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description >ul{
   display: flex;
   align-items: center;
   gap: 16px;
 }
+
 .section.one-lakh-banner-modal .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description >ul >li a{
   background: var(--orange);
   border: none;
@@ -969,9 +998,11 @@
   min-width: 145px;
   text-align: center;
 }
+
 .section.one-lakh-banner-modal .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description >ul >li a:hover{
   text-decoration: none;
 }
+
 .section.one-lakh-banner-modal .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description >ul >li:last-child a  {
   background: var(--white);
   color: var(--greyishblue);
@@ -979,16 +1010,19 @@
   gap: 10px;
   align-items: center;
 }
+
 .section.one-lakh-banner-modal .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description >ul >li >a span img{
   height: 24px;
   width: 24px;
   display: block;
 }
-@media screen and (min-width: 1025px) and (max-width: 1300px) {
+
+@media screen and (width >= 1025px) and (width <= 1300px) {
   .section.one-lakh-banner-modal .carousel-wrapper .carousel .panel-container .teaser .foreground {
     width: 81.25%;
   }
 }
+
 @media (width <= 900px) {
   .section.one-lakh-banner-modal .carousel-wrapper .carousel .panel-container .teaser .foreground {
       max-width: 100% ;
@@ -996,7 +1030,8 @@
       margin: 0 auto;
   }
 }
-@media screen and (max-width:1024px) {
+
+@media screen and (width <=1024px) {
   /* .section.one-lakh-banner-modal .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description>ul>li{
     display: block;
   } */
@@ -1006,6 +1041,7 @@
     padding: 16px 24px;
     width: auto;
   }
+
   .section.one-lakh-banner-modal .carousel-wrapper .panel-container .teaser.block>.background .front-picture{
     position: absolute;
     top: 0;
@@ -1016,27 +1052,30 @@
     min-height: 525px;
     z-index: -1;
   }
+
   .section.one-lakh-banner-modal .carousel-wrapper .panel-container .teaser.block>.background .front-picture img{
     display: block;
     width: 100%;
     height: 100%;
     min-height: 525px;
     object-fit: fill;
-    background-size: 100% 100%;
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
   }
 }
-@media screen and (max-width:767px) {
+
+@media screen and (width <=767px) {
   .section.one-lakh-banner-modal .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .long-description :where(h1,h2,h3,h4,h5,h6){
     text-align: center;
     line-height: 36px;
     font-size: 1.75rem;
   }
+
   .section.one-lakh-banner-modal .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description >ul{
     justify-content: center;
   }
+
   .section.one-lakh-banner-modal .carousel-wrapper .carousel .panel-container .teaser .foreground{
     display: flex;
     align-items: end;
@@ -1044,9 +1083,11 @@
     min-height: 440px;
     padding: unset;
   }
+
   .section.one-lakh-banner-modal .carousel-wrapper .panel-container .teaser.block.teaser-block-six>.background .foreground .text .short-description >ul >li a {
     min-width: 108px;
     padding: 12px 20px;
   }
 }
+
 /* ek lakh loan end */

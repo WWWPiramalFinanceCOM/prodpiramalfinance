@@ -3,7 +3,7 @@
 }
 
 .neeyat-banner.teaserv2-container.mb-40{
-    margin-bottom: 0px;
+    margin-bottom: 0;
     padding-bottom: 40px;
 }
 
@@ -46,7 +46,7 @@
     font-weight: 700;
     line-height: 34px;
     color: #212529;
-    font-family: 'Nunito-Bold';
+    font-family: Nunito-Bold, sans-serif;
 }
 
 
@@ -56,10 +56,9 @@
     display: inline-block;
 }
 
-@media screen and (max-width: 768px) {
-
+@media screen and (width <= 768px) {
     .neeyat-banner.teaserv2-container.mob-mb-20{
-        margin-bottom: 0px;
+        margin-bottom: 0;
         padding-bottom: 20px;
     }
 
@@ -83,7 +82,7 @@
     }
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (width <= 576px) {
     .neeyat-banner .teaserv2-wrapper .teaserv2 a .bg-image .rte-text-description p,
     .neeyat-banner .teaserv2-wrapper .teaserv2 a .bg-image .rte-text-description p strong {
         font-size: 12px;

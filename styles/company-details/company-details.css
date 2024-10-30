@@ -57,7 +57,7 @@
     position: relative;
     white-space: nowrap;
     color: var(--black);
-    font-family: 'Nunito-Regular', sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-size: 1pc;
     font-weight: 400;
     line-height: 24px;
@@ -66,7 +66,7 @@
     border-radius: 50px;
 }
 
-.section.company-details-wrapper .tab-link-wrapper .tab-link.block>div>div>ul>li a:after,
+.section.company-details-wrapper .tab-link-wrapper .tab-link.block>div>div>ul>li a::after,
 .section.financial-reports-carousel .tab-link-wrapper .tab-link.block>div .glider .glider-track li a::after {
     border-radius: 1px;
     border-right: 2px solid var(--dark-color);
@@ -112,11 +112,11 @@
 }
 
 .section.company-details-wrapper.about-us-company-details .tab-link-wrapper .tab-link.block>div>div>ul>li a {
-    font-family: 'Nunito-Bold', sans-serif;
+    font-family: Nunito-Bold, sans-serif;
     border: 1px solid var(--darkcharcoal);
 }
 
-.section.company-details-wrapper.about-us-company-details .tab-link-wrapper .tab-link.block>div>div>ul>li a:after,
+.section.company-details-wrapper.about-us-company-details .tab-link-wrapper .tab-link.block>div>div>ul>li a::after,
 .section.financial-reports-carousel .tab-link-wrapper .tab-link.block>div .glider .glider-track li a::after {
     right: -24px;
 }
@@ -132,12 +132,13 @@
     color: var(--black);
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (width <=1024px) {
     .section.company-details-wrapper .tab-link-wrapper .tab-link.block {
         margin: 0;
         padding-top: 16px;
         height: auto;
     }
+
     .section.financial-reports-carousel .tab-link-wrapper .tab-link.block{
         transform: unset;
     }
@@ -181,7 +182,7 @@
 
     .section.company-details-wrapper .tab-link-wrapper .tab-link.block .text.legal-mobile-text .cmp-text p:first-child {
         color: var(--greyishblue);
-        font-family: 'Nunito-Regular', sans-serif;
+        font-family: Nunito-Regular, sans-serif;
         font-size: 0.875rem;
         font-weight: 400;
         line-height: 20px;
@@ -191,7 +192,7 @@
 
     .section.company-details-wrapper .tab-link-wrapper .tab-link.block .text.legal-mobile-text .cmp-text p:nth-child(2) {
         color: var(--black);
-        font-family: 'Nunito-Bold', sans-serif;
+        font-family: Nunito-Bold, sans-serif;
         font-size: 1rem;
         font-weight: 700;
         line-height: 24px;
@@ -206,7 +207,7 @@
         position: relative;
         text-align: center;
         color: var(--blackpearl);
-        font-family: 'Nunito-Bold', sans-serif;
+        font-family: Nunito-Bold, sans-serif;
         font-size: 1.125rem;
         font-weight: 700;
         line-height: 27px;
@@ -219,8 +220,8 @@
         border-radius: 50px;
         position: relative;
         text-decoration: none;
-        color: rgba(0, 0, 0, .871);
-        font-family: 'Nunito-Regular', sans-serif;
+        color: rgb(0 0 0 / 87.1%);
+        font-family: Nunito-Regular, sans-serif;
         font-size: 1pc;
         font-weight: 400;
         line-height: 24px;
@@ -242,7 +243,7 @@
         background-color: transparent;
     }
 
-    .section.company-details-wrapper .tab-link-wrapper .tab-link.block>div>div>ul>li a:after {
+    .section.company-details-wrapper .tab-link-wrapper .tab-link.block>div>div>ul>li a::after {
         display: none;
     }
 
@@ -288,8 +289,8 @@
     .section.company-details-wrapper .tab-link-wrapper .tab-link.block>div>div>ul>li>strong>a {
         color: var(--black);
         background-color: transparent;
-        font-family: 'Nunito-Bold', sans-serif;
-        padding: 0px 144px 0 48px;
+        font-family: Nunito-Bold, sans-serif;
+        padding: 0 144px 0 48px;
         width: 100%;
         display: block;
         margin: 0;
@@ -315,10 +316,12 @@
         transform: translateY(-50%);
         width: 30px;
     }
+
     body.overlay-active.financial-reports-carousel{
         position: unset;
         background-color: unset;
     } 
+
     /* Modal and Overlay Styles */
     .section.company-details-wrapper .tab-link-wrapper .tab-link.block>.compony-details,
     .section.financial-reports-carousel .tab-link-wrapper .tab-link.block>.compony-details{
@@ -347,11 +350,8 @@
 
     .body-overlay {
         position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.5);
+        inset: 0;
+        background: rgb(0 0 0 / 50%);
         z-index: 1100;
         display: none;
     }
@@ -379,12 +379,12 @@
     .section.company-details-wrapper.about-us-company-details .tab-link-wrapper .tab-link.block>div>div>ul>li>strong>a {
         color: var(--black);
         border: unset;
-        font-family: 'Nunito-Bold', sans-serif;
+        font-family: Nunito-Bold, sans-serif;
     }
 
     .section.company-details-wrapper.about-us-company-details .tab-link-wrapper .tab-link.block>div>div>ul>li a {
         border: unset;
-        font-family: 'Nunito-Regular', sans-serif;
+        font-family: Nunito-Regular, sans-serif;
     }
 
     .section.company-details-wrapper.about-us-company-details .tab-link-wrapper .tab-link.block>div>div>ul>li a::before {
@@ -423,7 +423,8 @@
 .section.financial-reports-carousel .tab-link-wrapper .tab-link.block>div .glider .glider-track li a:hover {
     text-decoration: none;
 }
-@media screen and (max-width:1024px) {
+
+@media screen and (width <=1024px) {
     .section.financial-reports-carousel .tab-link-wrapper .tab-link.block>div{
         margin: unset;
         display: block;

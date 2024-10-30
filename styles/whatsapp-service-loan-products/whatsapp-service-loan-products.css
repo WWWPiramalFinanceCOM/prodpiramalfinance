@@ -6,7 +6,7 @@
 .section.loan-products-wrapper.whatsapp-service-loan-products-wraaper .default-content-wrapper p {
     color: var(--gradient-gray);
     display: block;
-    font-family: 'Nunito-Regular',sans-serif;
+    font-family: Nunito-Regular,sans-serif;
     font-size: 1.25rem;
     line-height: 28px;
     padding-bottom: 8px;
@@ -32,7 +32,7 @@
 
 .section.loan-products-wrapper.whatsapp-service-loan-products-wraaper .wrappercreation-wrapper .teaserv2-wrapper .bg-image .title {
     color: var(--black);
-    font-family: 'Nunito-Extrabold',sans-serif;
+    font-family: Nunito-Extrabold,sans-serif;
     padding: 16px 0 8px;
     font-weight: 800;
     margin-left: 0;
@@ -46,12 +46,12 @@
 
 .section.loan-products-wrapper.whatsapp-service-loan-products-wraaper .wrappercreation-wrapper .teaserv2-wrapper .bg-image .description {
     color: var(--gradient-gray);
-    font-family: 'Nunito-Regular',sans-serif;
+    font-family: Nunito-Regular,sans-serif;
     font-size: 1rem;
     line-height: 24px;
 }
 
-@media screen and (max-width:900px) {
+@media screen and (width <=900px) {
     .section.loan-products-wrapper.whatsapp-service-loan-products-wraaper .wrappercreation-wrapper>div>div {
         gap: 24px;
         grid-template-columns: 1fr;
@@ -68,7 +68,7 @@
 }
 
 
-@media screen and (max-width:767px) {
+@media screen and (width <=767px) {
     .section.loan-products-wrapper.whatsapp-service-loan-products-wraaper .default-content-wrapper h2 {
         font-size: 1.25rem;
         line-height: 28px;
@@ -101,7 +101,7 @@
     }
 }
 
-@media screen and (min-width:900px) and (max-width:1024px) {
+@media screen and (width >=900px) and (width <=1024px) {
     .section.loan-products-wrapper.whatsapp-service-loan-products-wraaper .wrappercreation-wrapper .teaserv2-wrapper .teaserv2 {
         padding: 24px;
     }

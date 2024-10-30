@@ -3,7 +3,7 @@
 .section.embed-wrapper .default-content-wrapper h2 {
     color: var(--text-color);
     display: block;
-    font-family: 'Nunito-Extrabold', sans-serif;
+    font-family: Nunito-Extrabold, sans-serif;
     font-size: 2rem;
     font-weight: 800;
     line-height: 40px;
@@ -35,7 +35,7 @@
 .section.embed-wrapper .embed-wrapper .embed .embed-placeholder .embed-placeholder-play>button {
     background-color: var(--white);
     cursor: pointer;
-    box-shadow: 0 0 0 2px rgba(255,255,255,0.1);
+    box-shadow: 0 0 0 2px rgb(255 255 255 / 10%);
 }
 
 .section.embed-wrapper .embed-wrapper .embed .embed-placeholder .embed-placeholder-play>button::before {
@@ -60,7 +60,7 @@
 }
 
 
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
     .section.embed-wrapper .default-content-wrapper h2 {
         font-size: 1.25rem;
         line-height: 28px;
@@ -105,12 +105,13 @@
         left: 2px;
         height: 5px;
     }
+
     .section.embed-wrapper.embed-text-center .embed-wrapper .embed .embed-placeholder>picture>img {
         border-radius: 15px;
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (width >= 768px) and (width <= 1024px) {
     .section.embed-wrapper .embed-wrapper .embed .embed-placeholder>picture>img {
         object-fit: unset;
     }
@@ -152,7 +153,6 @@
     display: block;
     height: 28px;
     position: absolute;
-    -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     width: 28px;
 }
@@ -176,7 +176,7 @@
 .section.details-verification-wrapper .teaserv2-wrapper .teaserv2.block>a .bg-image .title {
     color: var(--darkcharcoal);
     flex-basis: 36.4%;
-    font-family: 'Nunito-Extrabold', sans-serif;
+    font-family: Nunito-Extrabold, sans-serif;
     font-size: 1.25rem;
     font-weight: 800;
     line-height: 30px;
@@ -184,7 +184,7 @@
 }
 
 .section.details-verification-wrapper .teaserv2-wrapper .teaserv2.block>a .bg-image .title>p {
-    font-family: 'Nunito-Extrabold', sans-serif;
+    font-family: Nunito-Extrabold, sans-serif;
     font-size: 1.25rem;
     font-weight: 800;
     line-height: 30px;
@@ -204,7 +204,7 @@
 .section.details-verification-wrapper .teaserv2-wrapper .teaserv2.block>a .bg-image >div>ul>li {
     list-style-type: disc;
     color: var(--darkcharcoal);
-    font-family: 'Nunito-Regular', sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 40px;
@@ -214,7 +214,7 @@
     text-decoration: none;
 }
 
-@media screen and (max-width:767px) {
+@media screen and (width <=767px) {
     .section.details-verification-wrapper {
         row-gap: 11px;
     }
@@ -269,7 +269,7 @@
 }
 
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (width >= 768px) and (width <= 1024px) {
     .section.details-verification-wrapper .teaserv2-wrapper .teaserv2.block>a .bg-image .front-image picture img {
         height: 55px;
         width: 55px;
@@ -312,21 +312,21 @@
     width: 1022px;
 }
 
-@media screen and (max-width:767px) {
+@media screen and (width <=767px) {
     .section.embed-text-center .embed-wrapper .embed>.videotag>video {
         width: 100%;
         height: 204px;
     }
 }
 
-@media screen and (min-width:768px) and (max-width:1024px) {
+@media screen and (width >=768px) and (width <=1024px) {
     .section.embed-text-center .embed-wrapper .embed>.videotag>video {
         width: 100%;
         height: 414px;
     }
 }
 
-@media screen and (min-width:1025px) and (max-width: 1300px) {
+@media screen and (width >=1025px) and (width <= 1300px) {
     .section.embed-text-center .embed-wrapper .embed>div,
     .section.embed-text-center .embed-wrapper .embed {
         max-height: 461px;

@@ -19,19 +19,20 @@ dialog[open]:has(.modal-content .section.e-nach-reg-modal-wrapper) {
     height: 100%;
     max-width: 100%;
     max-height: 100%;
+
     /* padding: 16px; */
 }
 
 .section.e-nach-reg-modal-wrapper .default-content-wrapper>h2 {
     display: block;
-    margin: 0px;
-    color: rgb(51, 51, 51);
+    margin: 0;
+    color: rgb(51 51 51);
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 700;
     text-align: center;
     margin-top: 40px;
-    font-family: 'Nunito-Regular', sans-serif;
+    font-family: Nunito-Regular, sans-serif;
 }
 
 .section.e-nach-reg-modal-wrapper .columns-wrapper .columns {
@@ -88,21 +89,38 @@ dialog[open]:has(.modal-content .section.e-nach-reg-modal-wrapper) {
 .section.e-nach-reg-modal-wrapper .columns-wrapper .columns>div:nth-child(2) div p {
     display: block;
     font-weight: 400;
-    margin: 0px;
-    color: rgb(0, 0, 0);
+    margin: 0;
+    color: rgb(0 0 0);
     font-size: 1.25rem;
     line-height: 1.75rem;
-    font-family: 'Nunito-Regular', sans-serif;
+    font-family: Nunito-Regular, sans-serif;
 }
 
 .section.e-nach-reg-modal-wrapper .columns-wrapper .columns>div>div>h2 {
     display: block;
-    margin: 0px;
-    color: rgb(51, 51, 51);
+    margin: 0;
+    color: rgb(51 51 51);
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 700;
-    font-family: 'Nunito-Regular', sans-serif;
+    font-family: Nunito-Regular, sans-serif;
+}
+
+.section.e-nach-three-logo .default-content-wrapper ul {
+    width: 100%;
+    display: flex;
+    max-width: 218px;
+    flex-direction: column;
+    align-items: center;
+    z-index: 20;
+}
+
+.section.e-nach-three-logo .default-content-wrapper ul:last-child {
+    content: '';
+    position: absolute;
+    width: 60%;
+    max-width: 60%;
+    z-index: 10px;
 }
 
 .section.e-nach-reg-modal-wrapper .columns-wrapper .columns>div>div ul {
@@ -122,8 +140,17 @@ dialog[open]:has(.modal-content .section.e-nach-reg-modal-wrapper) {
     justify-content: flex-start;
 }
 
+.section.e-nach-three-logo .default-content-wrapper ul li span {
+    display: contents;
+}
+
 .section.e-nach-reg-modal-wrapper .columns-wrapper .columns>div>div ul li a span {
     display: contents;
+}
+
+.section.e-nach-three-logo .default-content-wrapper ul li span img {
+    width: 66px;
+    display: block;
 }
 
 .section.e-nach-reg-modal-wrapper .columns-wrapper .columns>div>div ul li a span img {
@@ -133,9 +160,11 @@ dialog[open]:has(.modal-content .section.e-nach-reg-modal-wrapper) {
     border-radius: 4.2px;
 }
 
+
 .section.e-nach-reg-modal-wrapper .columns-wrapper .columns>div:last-child>div p span {
     display: contents;
 }
+
 
 .section.e-nach-reg-modal-wrapper .columns-wrapper .columns>div:last-child>div p span img {
     height: 116px;
@@ -151,11 +180,11 @@ dialog[open]:has(.modal-content .section.e-nach-reg-modal-wrapper) {
     padding-left: 24px;
     display: block;
     font-weight: 400;
-    margin: 0px;
-    color: rgb(51, 51, 51);
+    margin: 0;
+    color: rgb(51 51 51);
     font-size: 1.25rem;
     line-height: 2rem;
-    font-family: 'Nunito-Regular', sans-serif;
+    font-family: Nunito-Regular, sans-serif;
 }
 
 .section.e-nach-three-logo .default-content-wrapper {
@@ -168,32 +197,14 @@ dialog[open]:has(.modal-content .section.e-nach-reg-modal-wrapper) {
     position: relative;
 }
 
-.section.e-nach-three-logo .default-content-wrapper ul {
-    width: 100%;
-    display: flex;
-    max-width: 218px;
-    flex-direction: column;
-    align-items: center;
-    z-index: 20;
-}
-
-.section.e-nach-three-logo .default-content-wrapper ul li span {
-    display: contents;
-}
-
-.section.e-nach-three-logo .default-content-wrapper ul li span img {
-    width: 66px;
-    display: block;
-}
-
 .section.e-nach-three-logo .default-content-wrapper ul li {
     display: block;
     font-weight: 400;
-    margin: 0px;
-    color: rgb(51, 51, 51);
+    margin: 0;
+    color: rgb(51 51 51);
     font-size: 1rem;
     line-height: 1.5rem;
-    font-family: 'Nunito-Regular', sans-serif;
+    font-family: Nunito-Regular, sans-serif;
 }
 
 .modal dialog[open]:has(.modal-content .section.e-nach-reg-modal-wrapper) .close-button {
@@ -203,27 +214,17 @@ dialog[open]:has(.modal-content .section.e-nach-reg-modal-wrapper) {
 }
 
 .section.e-nach-three-logo .default-content-wrapper ul:last-child li {
-
     height: 1px;
     width: 100%;
     background-color: var(--pattensblue);
     margin-top: 32px;
 }
 
-.section.e-nach-three-logo .default-content-wrapper ul:last-child {
-    content: '';
-    position: absolute;
-    z-index: 10;
-    width: 60%;
-    max-width: 60%;
-    z-index: 10px;
-}
-
 .section.e-nach-mob-section {
     display: none;
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (width <=1024px) {
     .section.e-nach-mob-section {
         display: block;
     }
@@ -251,7 +252,7 @@ dialog[open]:has(.modal-content .section.e-nach-reg-modal-wrapper) {
     .section.e-nach-mob-section .default-content-wrapper h2 {
         color: var(--black);
         text-align: center;
-        font-family: 'Nunito-Regular', sans-serif;
+        font-family: Nunito-Regular, sans-serif;
         font-size: 18px;
         font-style: normal;
         font-weight: 800;
@@ -269,15 +270,21 @@ dialog[open]:has(.modal-content .section.e-nach-reg-modal-wrapper) {
         width: 18px;
         height: 4px;
         border-radius: 99px;
-        background-color: rgb(221, 221, 221);
+        background-color: rgb(221 221 221);
         display: block;
+    }
+
+    .section.e-nach-mob-section .default-content-wrapper ul li{
+        display: flex;
+        align-items: center;
+        justify-content: center
     }
 
     .section.e-nach-mob-section .default-content-wrapper ul li:first-child {
         text-align: center;
         max-width: 236px;
         width: 100%;
-        font-family: 'Nunito-Regular', sans-serif;
+        font-family: Nunito-Regular, sans-serif;
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
@@ -290,9 +297,9 @@ dialog[open]:has(.modal-content .section.e-nach-reg-modal-wrapper) {
             display: flex;
             transition: box-shadow .3s cubic-bezier(.4,0,.2,1) 0ms;
             background-color: var(--white);
-            color: rgba(0, 0, 0, .87);
+            color: rgb(0 0 0 / 87%);
             border-radius: 4px;
-            box-shadow: 0 3px 3px -2px rgba(0, 0, 0, .2), 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12);
+            box-shadow: 0 3px 3px -2px rgb(0 0 0 / 20%), 0 3px 4px 0 rgb(0 0 0 / 14%), 0 1px 8px 0 rgb(0 0 0 / 12%);
             width: 100vw;
             position: fixed;
             bottom: 0;
@@ -307,6 +314,7 @@ dialog[open]:has(.modal-content .section.e-nach-reg-modal-wrapper) {
             padding: 12px 16px;
             z-index: 1000;
         }
+
         .section.e-nach-mob-section .default-content-wrapper p a{
             padding: 16px 24px;
             font-size: 18px;
@@ -317,32 +325,32 @@ dialog[open]:has(.modal-content .section.e-nach-reg-modal-wrapper) {
             width: 100%;
             text-align: center;
             border-radius: 8px;
-            font-family: 'Nunito-Regular', sans-serif;
+            font-family: Nunito-Regular, sans-serif;
             font-weight: 700;
             cursor: pointer;
         }
-        .section.e-nach-mob-section .default-content-wrapper ul li{
-            display: flex;
-            align-items: center;
-            justify-content: center
-        }
+
         .section.e-nach-mob-section .default-content-wrapper ul li span{
             display: contents;
         }
+
         .section.e-nach-mob-section .default-content-wrapper ul li span img{
             width: 328px;
             display: block;
         }
+
         .modal dialog[open]:has(.modal-content .section.e-nach-reg-modal-wrapper){
             backdrop-filter: blur(2.1957px);
         }
 }
+
 /* modal one lakh ka loan kaise le Start */
 dialog[open]:has(.modal-content .section.one-lakh-modal) {
-    padding: 56px 0 0 0;
+    padding: 56px 0 0;
     width: 80vw;
     max-width: 700px;
 }
+
 .section.one-lakh-modal .embed-wrapper .block{
     margin: 0;
 }

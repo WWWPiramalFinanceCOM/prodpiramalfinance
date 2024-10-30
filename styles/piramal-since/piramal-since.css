@@ -2,7 +2,7 @@
   margin: 0 auto;
   color: var(--black);
   display: block;
-  font-family: 'Nunito-Extrabold', sans-serif;
+  font-family: Nunito-Extrabold, sans-serif;
   font-size: 2rem;
   font-weight: 800;
   line-height: 2.5rem;
@@ -15,7 +15,7 @@
   margin-bottom: 24px;
   color: var(--gradient-gray);
   display: block;
-  font-family: 'Nunito-Regular', sans-serif;
+  font-family: Nunito-Regular, sans-serif;
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.75rem;
@@ -28,10 +28,9 @@
   grid-template-columns: auto auto auto auto;
   gap: 44px 86px;
   text-align: center; */
-  column-gap: 86px;
+  gap: 44px 86px;
   display: grid;
   grid-template-columns: auto auto auto auto;
-  row-gap: 44px;
 }
 
 .section.piramal-since-wrapper .columns-wrapper .columns>div>div {
@@ -53,32 +52,38 @@
 
 .section.piramal-since-wrapper .columns-wrapper .columns div div>p:nth-child(2) {
   color: var(--darkcharcoal);
-  font-family: 'Nunito-Regular', sans-serif;
+  font-family: Nunito-Regular, sans-serif;
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.75rem;
   margin-bottom: 10px;
+  text-align: center;
 }
+
 .section.piramal-since-wrapper .columns-wrapper .columns div div>p:nth-child(3) {
   color: var(--darkcharcoal);
-  font-family: 'Nunito-Bold', sans-serif;
+  font-family: Nunito-Bold, sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.75rem;
+  padding-bottom: 58px;
 }
-@media screen and (max-width:1024px) {
+
+@media screen and (width <=1024px) {
   .section.piramal-since-wrapper .columns-wrapper .columns>div{
     column-gap: 90px;
     grid-template-columns: auto auto;
     padding: 0 24px;
   }
 }
-@media screen and (max-width:767px) {
+
+@media screen and (width <=767px) {
   .section.piramal-since-wrapper .default-content-wrapper h4{
     font-size: 1.25rem;
     line-height: 1.75rem;
     padding-bottom: 4px;
   }
+
   .section.piramal-since-wrapper .default-content-wrapper p{
     margin-bottom: 20px;
     font-size: 0.875rem;
@@ -91,15 +96,18 @@
     text-align: center;
     justify-content: unset;
   }
+
   .section.piramal-since-wrapper .columns-wrapper .columns div div>p:nth-child(1) picture img{
     height: 44px;
     margin-bottom: 10px;
     width: 44px;
   }
+
   .section.piramal-since-wrapper .columns-wrapper .columns div div>p:nth-child(2){
     font-size: 1rem;
     line-height: 1.5rem;
   }
+
   .section.piramal-since-wrapper .columns-wrapper .columns div div>p:nth-child(3){
     font-size: 1rem;
     line-height: 1.5rem;
@@ -118,18 +126,11 @@
   padding-bottom: 48px;
 }
 
-.section.piramal-since-wrapper .columns-wrapper .columns div div>p:nth-child(2){
-  text-align: center;
-}
-
-.section.piramal-since-wrapper .columns-wrapper .columns div div>p:nth-child(3){
-  padding-bottom: 58px;
-}
-
-@media screen and (max-width:767px) {
+@media screen and (width <=767px) {
   .section.our-journey-wrapper .default-content-wrapper h4 {
     padding-top: 52px;
     padding-bottom: 44px;
   }
 }
+
 /* our journey so far end */

@@ -1,11 +1,12 @@
 div.block.modal>dialog {
     max-width: 800px;
-    padding: 52px 0 0 0;
+    padding: 52px 0 0;
     border: transparent;
 }
 
 .block.modal dialog {
     --dialog-border-radius: 5px 5px 0 0;
+
     overscroll-behavior: none;
     border: 1px solid var(--dark-color);
     border-radius: var(--dialog-border-radius);
@@ -30,14 +31,14 @@ div.block.modal>dialog {
     padding: 0.5rem;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (width <= 1024px) {
     div.block.modal>dialog {
         max-width: 500px;
     }
 
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (width <= 576px) {
     div.block.modal>dialog {
         width: 95%;
     }

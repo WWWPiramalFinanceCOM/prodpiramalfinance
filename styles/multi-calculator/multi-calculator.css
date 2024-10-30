@@ -17,7 +17,7 @@
 .section.multi-calculator-wrapper .teaser-wrapper .teaser .background .text .eyebrow {
     color: var(--black);
     display: inline-block;
-    font-family: 'Nunito-Extrabold', sans-serif;
+    font-family: Nunito-Extrabold, sans-serif;
     font-size: 2.5rem;
     font-weight: 800;
     line-height: 60px;
@@ -25,7 +25,7 @@
 
 .section.multi-calculator-wrapper .teaser-wrapper .teaser .background .text .long-description p {
     color: var(--gradient-gray);
-    font-family: 'Nunito-Regular', sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 32px;
@@ -49,7 +49,7 @@
     width: 124px;
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (width <=1024px) {
     .section.multi-calculator-wrapper .teaser-wrapper .teaser .background .text .title :where(h1,h2,h3,h4,h5,h6),
     .section.multi-calculator-wrapper .teaser-wrapper .teaser .background .text .eyebrow {
         font-size: 1.5rem;
@@ -61,13 +61,14 @@
     .section.multi-calculator-wrapper .teaser-wrapper .teaser .background .front-picture {
         display: none;
     }
+
     .section.multi-calculator-wrapper .teaser-wrapper .teaser .background {
         flex-direction: row;
         min-height: 168px;
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
     .section.multi-calculator-wrapper .teaser-wrapper .teaser .background .text .long-description p {
         font-size: 0.875rem;
         line-height: 20px;
@@ -84,10 +85,9 @@
 }
 
 .section.multi-calc-teaser-wrapper .wrappercreation-wrapper .wrappercreation .wrapper-creation-container {
-    column-gap: 24px;
+    gap: 24px;
     display: grid;
     grid-template-columns: minmax(0, 595px) minmax(0, 595px);
-    row-gap: 24px;
 }
 
 .section.multi-calc-teaser-wrapper .teaser-wrapper .teaser,
@@ -110,7 +110,7 @@
 .section.multi-calc-teaser-wrapper .teaser-wrapper .teaser .background .foreground .text .long-description p {
     color: var(--white);
     display: block;
-    font-family: 'Nunito-Extrabold', sans-serif;
+    font-family: Nunito-Extrabold, sans-serif;
     font-size: 1.25rem;
     font-weight: 800;
     line-height: 30px;
@@ -121,7 +121,7 @@
     border: 1px solid var(--white);
     border-radius: 8px;
     color: var(--white);
-    font-family: 'Nunito-Bold', sans-serif;
+    font-family: Nunito-Bold, sans-serif;
     font-size: 0.875rem;
     font-weight: 700;
     line-height: 21px;
@@ -130,7 +130,7 @@
     margin: 0;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
     .section.multi-calc-teaser-wrapper .teaser-wrapper .teaser .background,
     .section.multi-calc-teaser-wrapper .teaser-wrapper .teaser {
         max-width: unset;
@@ -151,6 +151,7 @@
         padding-bottom: 8px;
     }
 }
+
 /* calculator teaser container end */
 
 
@@ -177,7 +178,7 @@
 .section.home-loan-eligibility-calculator .teaser-wrapper .teaser .background .foreground .text .title :where(h1,h2,h3,h4,h5,h6) {
     color: var(--white);
     display: block;
-    font-family: 'Nunito-Extrabold', sans-serif;
+    font-family: Nunito-Extrabold, sans-serif;
     font-size: 2rem;
     font-weight: 800;
     line-height: 32px;
@@ -186,16 +187,17 @@
 
 .section.home-loan-eligibility-calculator .teaser-wrapper .teaser .background .foreground .text .long-description p {
     color: var(--white);
-    font-family: 'Nunito-Regular', sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 24px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
     .section.home-loan-eligibility-calculator.breadcrumb-handle .breadcrumb-wrapper {
         position: unset;
     }
+
     .section.home-loan-eligibility-calculator .teaser-wrapper .teaser .background {
         margin-top: 32px;
         min-height: 112px;

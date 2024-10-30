@@ -2,7 +2,7 @@
 .section.tab-with-cards-wrapper .default-content-wrapper>h4 {
     color: var(--black);
     display: block;
-    font-family: 'Nunito-Extrabold', sans-serif;
+    font-family: Nunito-Extrabold, sans-serif;
     font-size: 2rem;
     font-weight: 800;
     line-height: 40px;
@@ -12,7 +12,7 @@
 .section.tab-with-cards-wrapper .default-content-wrapper>p {
     color: var(--gradient-gray);
     display: block;
-    font-family: 'Nunito-Regular', sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 28px;
@@ -29,7 +29,7 @@
     border-bottom: unset;
     border-right: 1px solid var(--zinc);
     color: var(--black);
-    font-family: "Nunito-regular", sans-serif;
+    font-family: Nunito-regular, sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 24px;
@@ -47,7 +47,7 @@
 
 .section.tab-with-cards-wrapper .tab-name-wrapper .tab-name.block .carousel-inner>div.active {
     color: var(--orange);
-    font-family: 'Nunito-Bold', sans-serif;
+    font-family: Nunito-Bold, sans-serif;
 }
 
 .section.tab-with-cards-wrapper .panel-container,
@@ -90,7 +90,7 @@
 .section.tab-with-cards-wrapper .wrappercreation-wrapper .wrapper-creation-container .teaser.block .background>.foreground .text .title>h3 {
     color: var(--white);
     display: block;
-    font-family: 'Nunito-Bold', sans-serif;
+    font-family: Nunito-Bold, sans-serif;
     font-size: 1.25rem;
     font-weight: 700;
     line-height: 28px;
@@ -102,7 +102,7 @@
 .section.tab-with-cards-wrapper .wrappercreation-wrapper .wrapper-creation-container .teaser.block .background>.foreground .text .long-description>p>a>sub {
     color: var(--white);
     display: block;
-    font-family: 'Nunito-Regular', sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-size: 0.875rem;
     font-weight: 400;
     line-height: 20px;
@@ -118,8 +118,7 @@
     text-decoration: underline;
 }
 
-@media screen and (max-width:900px) {
-
+@media screen and (width <=900px) {
     .section.tab-with-cards-wrapper .panel-container,
     .section.tab-with-cards-wrapper .wrappercreation-wrapper .wrapper-creation-container {
         grid-template-columns: 1fr;
@@ -134,7 +133,7 @@
     }
 }
 
-@media screen and (max-width:767px) {
+@media screen and (width <=767px) {
     .section.tab-with-cards-wrapper .default-content-wrapper>h4 {
         font-size: 1.25rem;
         line-height: 28px;
@@ -170,37 +169,41 @@
     }
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (width <=1024px) {
     .section.tab-with-cards-wrapper.teaser-container {
         padding: unset;
     }
+
+    .section.tab-with-cards-wrapper .panel-container .teaser.block .background>.foreground .text .long-description>p>br {
+        display: none
+    }
+
     .section.tab-with-cards-wrapper .wrappercreation-wrapper .wrapper-creation-container .teaser.block .background>.foreground .text .long-description>p>br {
         display: none;
     }
+
     .section.tab-with-cards-wrapper .panel-container .teaser.block .background>.foreground .text .long-description>p,
     .section.tab-with-cards-wrapper .wrappercreation-wrapper .wrapper-creation-container .teaser.block .background>.foreground .text .long-description>p,
     .section.tab-with-cards-wrapper .wrappercreation-wrapper .wrapper-creation-container .teaser.block .background>.foreground .text .long-description>p>a>sub {
         font-size: 0.75rem;
         line-height: 16px;
     }
-    .section.tab-with-cards-wrapper .panel-container .teaser.block .background>.foreground .text .long-description>p>br {
-        display: none
-    }
+
+
     .section.tab-with-cards-wrapper .panel-container .teaser.block .background>.foreground .text .long-description,
     .section.tab-with-cards-wrapper .wrappercreation-wrapper .wrapper-creation-container .teaser.block .background>.foreground .text .long-description {
         min-height: unset;
     }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (width <= 425px) {
     .section.tab-with-cards-wrapper .panel-container .teaser.block .background>.foreground .text .long-description>p>br ,
     .section.tab-with-cards-wrapper .wrappercreation-wrapper .wrapper-creation-container .teaser.block .background>.foreground .text .long-description>p>br {
         display: none;
     }
 }
 
-@media screen and (min-width:900px) and (max-width:1024px) {
-
+@media screen and (width >=900px) and (width <=1024px) {
     .section.tab-with-cards-wrapper .panel-container .teaser.block.card-full-width,
     .section.tab-with-cards-wrapper .wrappercreation-wrapper .wrapper-creation-container .teaser.block.card-full-width {
         grid-column: span 1;
@@ -226,6 +229,7 @@
 
 .section.we-care-card-wrapper .wrappercreation-wrapper .wrappercreation .wrapper-creation-container .teaser-wrapper .teaser {
     position: relative;
+    border-radius: 30px;
 }
 
 .section.we-care-card-wrapper .wrappercreation-wrapper .wrappercreation .wrapper-creation-container .teaser-wrapper:first-child {
@@ -252,10 +256,6 @@
     grid-column: span 4 / span 4;
 }
 
-.section.we-care-card-wrapper .wrappercreation-wrapper .wrappercreation .wrapper-creation-container .teaser-wrapper .teaser{
-    border-radius: 30px;
-}
-
 .section.we-care-card-wrapper .wrappercreation-wrapper .wrappercreation .wrapper-creation-container .teaser-wrapper .teaser .background {
     height: 200px;
 }
@@ -274,14 +274,14 @@
 }
 
 .section.we-care-card-wrapper .wrappercreation-wrapper .wrappercreation .wrapper-creation-container .teaser-wrapper .teaser .background .foreground .text .title h3 {
-    font-family: 'Nunito-Extrabold', sans-serif;
+    font-family: Nunito-Extrabold, sans-serif;
     font-weight: 800;
     margin: 0;
 }
 
 .section.we-care-card-wrapper .wrappercreation-wrapper .wrappercreation .wrapper-creation-container .teaser-wrapper .teaser .background .foreground .text .long-description p {
     color: var(--white);
-    font-family: 'Nunito-Extralight', sans-serif;
+    font-family: Nunito-Extralight, sans-serif;
     font-size: 1rem;
     font-weight: 200;
     line-height: 24px;
@@ -291,17 +291,14 @@
     padding: 0;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
     .section.we-care-card-wrapper .wrappercreation-wrapper .wrappercreation .wrapper-creation-container {
         gap: 16px;
+        margin-top: 24px;
     }
 
     .section.we-care-card-wrapper .default-content-wrapper>h4 {
         padding-bottom: 4px;
-    }
-
-    .section.we-care-card-wrapper .wrappercreation-wrapper .wrappercreation .wrapper-creation-container {
-        margin-top: 24px;
     }
 
     .section.we-care-card-wrapper .wrappercreation-wrapper .wrappercreation .wrapper-creation-container .teaser-wrapper:first-child {
@@ -340,7 +337,7 @@
 
     .section.we-care-card-wrapper .wrappercreation-wrapper .wrappercreation .wrapper-creation-container .teaser-wrapper .teaser .background .foreground .text .title h3 {
         color: var(--white);
-        font-family: 'Nunito-Extrabold', sans-serif;
+        font-family: Nunito-Extrabold, sans-serif;
         font-size: 1.25rem;
         font-weight: 800;
         line-height: 28px;
@@ -348,14 +345,14 @@
 
     .section.we-care-card-wrapper .wrappercreation-wrapper .wrappercreation .wrapper-creation-container .teaser-wrapper .teaser .background .foreground .text .long-description p {
         color: var(--white);
-        font-family: 'Nunito-Extralight', sans-serif;
+        font-family: Nunito-Extralight, sans-serif;
         font-size: 1rem;
         font-weight: 200;
         line-height: 24px;
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (width >= 768px) and (width <= 1024px) {
     .section.we-care-card-wrapper .wrappercreation-wrapper .wrappercreation .wrapper-creation-container {
         gap: 16px;
     }
@@ -417,7 +414,7 @@
     border-radius: 20px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
     .section.our-work-culture-card-wrapper .wrappercreation-wrapper .wrappercreation .wrapper-creation-container .teaser-wrapper:first-child {
         grid-column: span 12 / span 12;
     }
@@ -444,7 +441,7 @@
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (width >= 768px) and (width <= 1024px) {
     .section.our-work-culture-card-wrapper .wrappercreation-wrapper .wrappercreation .wrapper-creation-container .teaser-wrapper .teaser .background {
         height: 15pc;
      }

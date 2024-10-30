@@ -11,7 +11,7 @@
 .section.metro-cities-wrapper .default-content-wrapper>h2 {
     color: var(--black);
     display: block;
-    font-family: 'Nunito-Extrabold', sans-serif;
+    font-family: Nunito-Extrabold, sans-serif;
     font-size: 2rem;
     font-weight: 800;
     line-height: 40px;
@@ -22,7 +22,7 @@
     margin-bottom: 24px;
     color: var(--gradient-gray);
     display: block;
-    font-family: 'Nunito-Regular', sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 28px;
@@ -30,7 +30,7 @@
 }
 
 .section.metro-cities-wrapper .city-list-wrapper {
-    padding: 0 0 80px 0;
+    padding: 0 0 80px;
 }
 
 .section.metro-cities-wrapper .default-content-wrapper>ul,
@@ -57,11 +57,12 @@
 .section.metro-cities-wrapper .default-content-wrapper>ul li a,
 .section.metro-cities-wrapper .city-list-wrapper .city-list > ul li a {
     color: var(--darkcharcoal);
-    font-family: 'Nunito-Regular', sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-size: 1rem;
     font-weight: 700;
     line-height: 24px;
 }
+
 .section.metro-cities-wrapper .default-content-wrapper>ul li a:hover,
 .section.metro-cities-wrapper .city-list-wrapper .city-list > ul li a:hover{
     color: var(--orange)
@@ -71,13 +72,13 @@
     padding-bottom: 48px;
 }
 
-@media screen and (max-width:767px) {
+@media screen and (width <=767px) {
     .section.metro-cities-wrapper .default-content-wrapper {
         padding: 40px 16px 0;
     }
 
     .section.metro-cities-wrapper .city-list-wrapper {
-        padding: 0 16px 40px 16px;
+        padding: 0 16px 40px;
     }
 
     .section.metro-cities-wrapper .default-content-wrapper>h2 {
@@ -97,18 +98,21 @@
     .section.metro-cities-wrapper .city-list-wrapper .city-list > ul {
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
+
     .section.metro-cities-wrapper.personal-loan-metro-cities .default-content-wrapper>h2 {
         padding-bottom: 24px;
     }
 }
 
-@media (min-width:767px) and (max-width:1024px) {
+@media (width >=767px) and (width <=1024px) {
     .section.metro-cities-wrapper .default-content-wrapper {
         padding: 80px 16px 0;
     }
+
     .section.metro-cities-wrapper .city-list-wrapper {
-        padding: 0 16px 80px 16px;
+        padding: 0 16px 80px;
     }
+
     .section.metro-cities-wrapper .default-content-wrapper>ul, 
     .section.metro-cities-wrapper .city-list-wrapper .city-list > ul {
         gap: 24px 12px;

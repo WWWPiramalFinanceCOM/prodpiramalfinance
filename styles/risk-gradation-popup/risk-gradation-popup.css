@@ -4,14 +4,14 @@ dialog[open]:has(.modal-content .section.support-contact-us-popup.risk-gradation
 }
 
 dialog[open]:has(.modal-content .section.support-contact-us-popup.risk-gradation-popup) .modal-content {
-    padding: 20px 100px 0px 85px;
+    padding: 20px 100px 0 85px;
 }
 
 .section.support-contact-us-popup.risk-gradation-popup .default-content-wrapper h3 {
     font-size: 2rem;
     line-height: 2.5rem;
     margin-bottom: .5rem;
-    font-family: 'Nunito-Extrabold', sans-serif;
+    font-family: Nunito-Extrabold, sans-serif;
     font-weight: 800;
     color: var(--black);
 }
@@ -19,7 +19,7 @@ dialog[open]:has(.modal-content .section.support-contact-us-popup.risk-gradation
 .section.support-contact-us-popup.risk-gradation-popup .default-content-wrapper > p {
     font-size: 1.125rem;
     line-height: 1.5rem;
-    font-family: 'Nunito-Regular', sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-weight: 400;
 }
 
@@ -35,7 +35,7 @@ dialog[open]:has(.modal-content .section.support-contact-us-popup.risk-gradation
 .section.support-contact-us-popup.risk-gradation-popup .default-content-wrapper ul> li {
     font-size: 1.125rem;
     line-height: 1.75rem;
-    font-family: 'Nunito-Regular', sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-weight: 400;
     color: var(--black);
     margin: 0;
@@ -44,14 +44,13 @@ dialog[open]:has(.modal-content .section.support-contact-us-popup.risk-gradation
 dialog[open]:has(.modal-content .section.support-contact-us-popup.risk-gradation-popup) .close-button {
     display: block;
     padding-right: 30px;
-    color: rgba(0, 0, 0, 0.87);
+    color: rgb(0 0 0 / 87%);
 }
 
-@media screen and (max-width:767px) {
+@media screen and (width <=767px) {
     dialog[open]:has(.modal-content .section.support-contact-us-popup.risk-gradation-popup){
         padding-top: 45px; 
         padding-bottom: 20px;
-        max-height: unset;
         margin-top: 52px;
         max-height: calc(100% - 40px);
         border-radius: 12px;
@@ -89,7 +88,7 @@ dialog[open]:has(.modal-content .section.support-contact-us-popup.risk-gradation
     }
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (width <=1024px) {
     dialog[open]:has(.modal-content .section.support-contact-us-popup.risk-gradation-popup) .modal-content {
         padding: 0;
         overflow-y: unset;
@@ -102,11 +101,11 @@ dialog[open]:has(.modal-content .section.support-contact-us-popup.risk-gradation
     .section.support-contact-us-popup.risk-gradation-popup .default-content-wrapper::before {
         width: 30px;
         height: 6px;
-        background-color: rgb(196, 196, 196);
+        background-color: rgb(196 196 196);
     }
 }
 
-@media screen and (min-width:768px) and  (max-width:1024px) {
+@media screen and (width >=768px) and  (width <=1024px) {
 .section.support-contact-us-popup.risk-gradation-popup .default-content-wrapper h3 {
     margin-top: 25px;
 }

@@ -1,6 +1,6 @@
 /* interest rate accordian start */
 .section.interest-rates-accordian-wrapper .default-content-wrapper h2 {
-    font-family: 'Nunito-Extrabold', sans-serif;
+    font-family: Nunito-Extrabold, sans-serif;
     font-size: 1.25rem;
     font-weight: 800;
     line-height: 30px;
@@ -8,22 +8,25 @@
     color: var(--darkcharcoal);
     margin-bottom: 40px;
 }
+
 .section.table-full-row .default-content-wrapper >p{
     background-color: var(--white);
     border: 1px solid var(--dark-color);
     color: var(--black);
     display: block;
-    font-family: 'Nunito-Bold', sans-serif;
+    font-family: Nunito-Bold, sans-serif;
     font-size: 14px;
     font-weight: 700;
     line-height: 21px;
     padding: .5rem .25rem;
     text-align: center;
 }
+
 .section.table-full-row .code-wrapper .code>div>table{
     width: 100% !important;
     height: auto;
 }
+
 .section.interest-rates-accordian-wrapper .accordion-group-wrapper .accordion-group {
     padding: 0;
 }
@@ -49,9 +52,35 @@
     position: relative;
 }
 
+.section.stakeholder-disclosures .default-content-wrapper h3{
+    color: var(--gradient-gray);
+    font-family: Nunito-Bold, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 22px;
+    margin-bottom: 12px;
+}
+
+.section.stakeholder-disclosures .default-content-wrapper p{
+    color: var(--black);
+    font-family: Nunito-Regular, sans-serif;
+    font-size: 1rem;
+    line-height: 22px;
+    margin-top: 16px;
+}
+
+.section.media-acc-wrapper .accordion-group-wrapper .accordion-group .accordion>details >div>p {
+    margin: 0;
+    color: var(--darkcharcoal);
+    font-family: Nunito-Regular, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 24px;
+}
+
 .section.interest-rates-accordian-wrapper .accordion-group-wrapper .accordion-group .accordion>details>summary>div>h3,
 .section.interest-rates-accordian-wrapper .accordion-group-wrapper .accordion-group .accordion>details>summary>div>p{
-    font-family: 'Nunito-Regular', sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-size: 1rem;
     line-height: 24px;
     margin: 0;
@@ -64,7 +93,7 @@
 .section.interest-rates-accordian-wrapper .accordion-group-wrapper .accordion-group .accordion>details>summary::after {
     color: var(--text-color);
     content: "+";
-    font-family: 'Nunito-Extrabold', sans-serif;
+    font-family: Nunito-Extrabold, sans-serif;
     font-size: 1.75rem;
     font-weight: 800;
     height: 2px;
@@ -111,42 +140,68 @@
     position: relative;
     text-decoration: none;
     display: block;
-    font-family: 'Nunito-Regular', sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-size: 0.75rem;
     line-height: 24px;
     margin-bottom: 4px;
+}
+
+.section.media-acc-wrapper .accordion-group-wrapper .accordion-group .accordion>details >div>ul >li>a{
+    color: var(--text-color);
+    font-family: Nunito-Regular, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0;
+ }
+
+.section.interest-rates-accordian-wrapper .accordion-group-wrapper .accordion-group .accordion>details>div>ul>li>ul>li>a {
+    font-family: Nunito-Regular, sans-serif;
+    font-size: 1rem;
+    line-height: 24px;
+    color: var(--text-color);
+    display: block;
 }
 
 .section.interest-rates-accordian-wrapper .accordion-group-wrapper .accordion-group .accordion>details>div>ul>li:hover a {
     color: var(--orange);
 }
 
+.section.media-acc-wrapper .accordion-group-wrapper .accordion-group .accordion>details >div>ul {
+    list-style: disc;
+    border: none;
+ }
+
 .section.interest-rates-accordian-wrapper .accordion-group-wrapper .accordion-group .accordion>details>div>ul>li>ul {
     margin: 0;
 }
 
-.section.interest-rates-accordian-wrapper .accordion-group-wrapper .accordion-group .accordion>details>div>ul>li>ul>li>a {
-    font-family: 'Nunito-Regular', sans-serif;
-    font-size: 1rem;
-    line-height: 24px;
-    color: var(--text-color);
-    display: block;
-}
 .section.interest-rates-accordian-wrapper .accordion-group-wrapper .accordion-group .accordion>details>div>ul>li>ul>li>a sub{
-    font-family: 'Nunito-Regular', sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-size: 1rem; 
 }
+
 .section.interest-rates-accordian-wrapper .accordion-group-wrapper .accordion-group .accordion>details>div>ul>li>ul>li>a sub:first-child{
-    font-family: 'Nunito-Regular', sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-size: 1rem; 
 }
+
+.section.media-acc-wrapper .accordion-group-wrapper .accordion-group .accordion>details >div>ul >li::after{
+    content: none;
+ }
+
+.section.media-acc-wrapper .accordion-group-wrapper .accordion-group .accordion>details >div>ul >li:hover a{
+    color: #356ca3;
+    text-decoration-line: underline;
+}
+
 .section.interest-rates-accordian-wrapper .accordion-group-wrapper .accordion-group .accordion>details>div>ul>li>ul>li>a:hover{
     text-decoration: none;
 }
 
 .section.interest-rates-accordian-wrapper .accordion-group-wrapper .accordion-group .accordion>details>div>ul>li::after {
     content: "\eadf";
-    font-family: 'icomoon' !important;
+    font-family: icomoon, sans-serif !important;
     position: absolute;
     right: 24px;
     top: 35%;
@@ -156,34 +211,21 @@
     background-repeat: no-repeat;
     color: var(--darkcharcoal);
 }
+
 .section.interest-rates-accordian-wrapper .accordion-group-wrapper .accordion-group .accordion>details>div>ul>li:hover::after{
     color: var(--orange);
 }
+
 .section.stakeholder-disclosures .default-content-wrapper h2{
     margin-top: 16px;
     color: var(--black);
-    font-family: 'Nunito-Extrabold', sans-serif;
+    font-family: Nunito-Extrabold, sans-serif;
     font-size: 1.125rem;
     font-weight: 800;
     line-height: 24px;
 }
 
-.section.stakeholder-disclosures .default-content-wrapper h3{
-    color: var(--gradient-gray);
-    font-family: 'Nunito-Bold', sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: 22px;
-    margin-bottom: 12px;
-}
-.section.stakeholder-disclosures .default-content-wrapper p{
-    color: var(--black);
-    font-family: 'Nunito-Regular', sans-serif;
-    font-size: 1rem;
-    line-height: 22px;
-    margin-top: 16px;
-}
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
     .section.interest-rates-accordian-wrapper .default-content-wrapper h2 {
         font-size: 1rem;
         line-height: 24px;
@@ -208,6 +250,7 @@
         width: 15px;
     }
 }
+
 /* interest rate accordian end */
 
 
@@ -227,22 +270,8 @@
     border-bottom-right-radius: 4px;
 }
 
-.section.media-acc-wrapper .accordion-group-wrapper .accordion-group .accordion>details >div>p {
-    margin: 0;
-    color: var(--darkcharcoal);
-    font-family: 'Nunito-Regular', sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 24px;
-}
-
-.section.media-acc-wrapper .accordion-group-wrapper .accordion-group .accordion>details >div>ul {
-   list-style: disc;
-   border: none;
-}
-
 .section.media-acc-wrapper .accordion-group-wrapper .accordion-group .accordion>details >div>ul >li{
-    font-family: 'Nunito-Regular', sans-serif;
+    font-family: Nunito-Regular, sans-serif;
     font-size: 1rem;
     font-weight: 400;
     line-height: 24px;
@@ -265,24 +294,6 @@
     left: 0;
     position: absolute;
     width: 9px;
- }
-
- .section.media-acc-wrapper .accordion-group-wrapper .accordion-group .accordion>details >div>ul >li::after{
-    content: none;
- }
-
- .section.media-acc-wrapper .accordion-group-wrapper .accordion-group .accordion>details >div>ul >li>a{
-    color: var(--text-color);
-    font-family: 'Nunito-Regular', sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 24px;
-    margin: 0;
- }
-
- .section.media-acc-wrapper .accordion-group-wrapper .accordion-group .accordion>details >div>ul >li:hover a{
-    color: #356ca3;
-    text-decoration-line: underline;
  }
 
 /* media accordian end */

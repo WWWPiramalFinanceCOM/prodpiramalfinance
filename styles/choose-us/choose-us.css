@@ -2,7 +2,7 @@
 .section.choose-us-css .default-content-wrapper h2 {
   color: var(--black);
   display: block;
-  font-family: 'Nunito-Extrabold', sans-serif;
+  font-family: Nunito-Extrabold, sans-serif;
   font-size: 2rem;
   font-weight: 800;
   line-height: 2.5rem;
@@ -14,7 +14,7 @@
   margin-bottom: 24px;
   color: var(--gradient-gray);
   display: block;
-  font-family: 'Nunito-Regular', sans-serif;
+  font-family: Nunito-Regular, sans-serif;
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.75rem;
@@ -24,7 +24,7 @@
 
 .section.choose-us-css .default-content-wrapper p > strong {
     color: var(--darkcharcoal);
-    font-family: 'Nunito-Bold', sans-serif;
+    font-family: Nunito-Bold, sans-serif;
     font-size: 1.125rem;
     font-weight: 700;
     line-height: 28px;
@@ -35,11 +35,10 @@
 }
 
 .section.choose-us-css .columns-wrapper .columns>div {
-  column-gap: 5pc;
+  gap: 40px 5pc;
   display: grid;
   grid-auto-rows: 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  row-gap: 40px;
   align-items: start;
 }
 
@@ -59,7 +58,7 @@
 
 .section.choose-us-css .columns-wrapper .columns div div :nth-child(2) {
   color: var(--darkcharcoal);
-  font-family: 'Nunito-Extrabold', sans-serif;
+  font-family: Nunito-Extrabold, sans-serif;
   font-size: 1.25rem;
   font-weight: 800;
   line-height: 1.75rem;
@@ -68,7 +67,7 @@
 
 .section.choose-us-css .columns-wrapper .columns div div :nth-child(3) {
   color: var(--darkgrey);
-  font-family: 'Nunito-Regular', sans-serif;
+  font-family: Nunito-Regular, sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5rem;
@@ -76,7 +75,7 @@
 
 .section.choose-us-css .columns-wrapper .columns div div :nth-child(3)>strong {
   color: var(--darkgrey);
-  font-family: 'Nunito-Regular',sans-serif;
+  font-family: Nunito-Regular,sans-serif;
   font-size: 1rem;
   font-weight: bolder;
   line-height: 24px;
@@ -122,7 +121,7 @@
   padding-top: unset;
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (width <=1024px) {
   .section.choose-us-css .columns-wrapper .columns>div {
     grid-auto-rows: auto;
     grid-template-columns: 1fr;
@@ -136,7 +135,7 @@
 
   .section.choose-us-css .columns-wrapper .columns div div :nth-child(2) {
     color: var(--darkcharcoal);
-    font-family: 'Nunito-Bold', sans-serif;
+    font-family: Nunito-Bold, sans-serif;
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.5rem;
@@ -156,7 +155,7 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (width <= 767px) {
   .section.choose-us-css .default-content-wrapper h2 {
     font-size: 1.25rem;
     line-height: 1.75rem;
@@ -192,14 +191,13 @@
 }
 
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (width >= 768px) and (width <= 1024px) {
   .section.choose-us-css .columns-wrapper .columns>div {
-    column-gap: 36px;
-    row-gap: 40px;
+    gap: 40px 36px;
   }
 }
 
-@media (min-width: 900px) and (max-width: 1100px) {
+@media (width >= 900px) and (width <= 1100px) {
   .section.choose-us-css .columns-wrapper .columns>div {
     grid-template-columns: 1fr 1fr;
   }
@@ -209,9 +207,10 @@
   }
 }
 
-@media screen and (min-width: 1025px) and (max-width: 1300px) {
+@media screen and (width >= 1025px) and (width <= 1300px) {
   .section.choose-us-css .default-content-wrapper p{
     font-size: 1rem;
   }
 }
+
 /* choose us end */
