@@ -1,4 +1,7 @@
 import { CFApiCall, fetchAPI, getDay } from "../../scripts/scripts.js";
+import { fetchPlaceholders } from "../../scripts/aem.js";
+
+const placeholders = await fetchPlaceholders();
 
 export const setLocationObj = {
   getExcelData: null,
@@ -11,7 +14,8 @@ export const setLocationObj = {
   },
 };
 
-const GOOGLE_MAPS_API_KEY = "AIzaSyDx1HwnCLjSSIm_gADqaYAZhSBh7hgcwTQ";
+// const GOOGLE_MAPS_API_KEY = "AIzaSyDx1HwnCLjSSIm_gADqaYAZhSBh7hgcwTQ";
+const GOOGLE_MAPS_API_KEY = placeholders.googleKey;
 
 
 const locationInLatLan = {};
@@ -184,7 +188,7 @@ function reviewRender() {
     const reviewCards = document.querySelector(".branchcustomer-review-cards").querySelector(".carousel-inner")?.querySelectorAll(".carousel-item");
     const currentNextButton = document.querySelector(".branchcustomer-review-cards").querySelector(".glider-next");
     const currentPrevButton = document.querySelector(".branchcustomer-review-cards").querySelector(".glider-prev");
-  
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(
         (entry) => {
@@ -219,7 +223,7 @@ function reviewRender() {
       );
     });
     observer.observe(document.querySelector(".branchcustomer-review-cards").querySelector(".carousel-inner"));
-  
+
     if (reviewCards.length <= 3) {
       document.querySelector(".branchcustomer-review-cards").querySelector(".carousel-inner").querySelector(".carousel-navigation-buttons").classList.add("dp-none");
     }
@@ -240,7 +244,7 @@ function renderRatingDiv() {
   return setLocationObj.review.map(eachEle => {
     const starToShow = Math.floor(eachEle.rating);
     const remainingStars = 5 - starToShow;
-    
+
     const starDiv = starColorIcon.repeat(starToShow) + starOutlineIcon.repeat(remainingStars);
 
     const subStringText = eachEle.text.length > 125 ? `${eachEle.text.substring(0, 125)}...` : eachEle.text;

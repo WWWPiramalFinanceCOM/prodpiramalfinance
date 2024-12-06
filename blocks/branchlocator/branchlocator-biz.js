@@ -6,8 +6,12 @@ import { initMap, searchBranchByURL } from "./branchlocator-api.js";
 import { setLocationObj } from "./branchlocator-init.js";
 import { renderCity, renderState } from "./branchlocator-render.js";
 import { innerBranchFunc } from "./branchlocator.js";
+import { fetchPlaceholders } from "../../scripts/aem.js";
 
-const GOOGLE_MAPS_API_KEY = "AIzaSyDx1HwnCLjSSIm_gADqaYAZhSBh7hgcwTQ";
+const placeholders = await fetchPlaceholders();
+
+// const GOOGLE_MAPS_API_KEY = "AIzaSyDx1HwnCLjSSIm_gADqaYAZhSBh7hgcwTQ";
+const GOOGLE_MAPS_API_KEY = placeholders.googleKey;
 
 export const dropDownStateCity = (response) => {
   return response.reduce((acc, location) => {
@@ -141,7 +145,8 @@ async function getStateCity(lat, lng) {
 
 function getStateName(lat, lan) {
   return new Promise((resolve, reject) => {
-    fetchAPI("GET", `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lan}&sensor=true&key=AIzaSyDx1HwnCLjSSIm_gADqaYAZhSBh7hgcwTQ`)
+    // fetchAPI("GET", `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lan}&sensor=true&key=AIzaSyDx1HwnCLjSSIm_gADqaYAZhSBh7hgcwTQ`)
+    fetchAPI("GET", `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lan}&sensor=true&key=${GOOGLE_MAPS_API_KEY}`)
       .then((res) => {
         resolve(res);
       })

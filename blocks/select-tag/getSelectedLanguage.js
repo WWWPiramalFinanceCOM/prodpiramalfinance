@@ -1,7 +1,11 @@
 import { fetchAPI } from '../../scripts/scripts.js';
+import { fetchPlaceholders } from "../../scripts/aem.js";
+
+const placeholders = await fetchPlaceholders();
 
 let data;
-const gooleMapKey = "AIzaSyDx1HwnCLjSSIm_gADqaYAZhSBh7hgcwTQ";
+// const gooleMapKey = "AIzaSyDx1HwnCLjSSIm_gADqaYAZhSBh7hgcwTQ";
+const gooleMapKey = placeholders.googleKey;
 
 
 export async function getSelectedLanguage(selectedLanguage = '', apiUrl = '/api/neeyat-muti-lang.json') {
