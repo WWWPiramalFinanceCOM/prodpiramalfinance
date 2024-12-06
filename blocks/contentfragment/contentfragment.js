@@ -79,7 +79,7 @@ export default async function decorate(blocks) {
                             </div>
                             <div class="col-span-2 flex justify-end">
                                 <picture><img class="cursor-pointer"
-                                        src="https://cdn.piramalfinance.com/pchfweb/assets/images/webps/downArrow.webp"
+                                        src="/images/downArrow.webp"
                                         alt="piramal faqs" width="24px" height="24px"></picture>
                             </div>
                         </div>
