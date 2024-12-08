@@ -1,5 +1,10 @@
-import { loadScript } from '../../scripts/aem.js';
+import { fetchPlaceholders, loadScript } from '../../scripts/aem.js';
 import { setLocationObj } from '../moredetailsaddress/moredetailsaddress.js';
+
+const placeholders = await fetchPlaceholders();
+
+// const GOOGLE_MAPS_API_KEY = "AIzaSyDx1HwnCLjSSIm_gADqaYAZhSBh7hgcwTQ";
+const GOOGLE_MAPS_API_KEY = placeholders.googleKey;
 
 export default function decorate(block) {
   block.innerHTML = `<div class='map-title'>
@@ -30,7 +35,7 @@ function myMap(lat, long) {
 }
 
 function settingCurrentLoct(setLocationObj) {
-  loadScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyDx1HwnCLjSSIm_gADqaYAZhSBh7hgcwTQ').then((resolve) => {
+  loadScript(`https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAPS_API_KEY}`).then((resolve) => {
     myMap(setLocationObj.lat, setLocationObj.lng);
   });
 }
