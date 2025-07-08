@@ -9,11 +9,6 @@ Disallow: /spreadsheets/
 Disallow: /scripts/
 Disallow: /styles/
 Disallow: /blocks/
-Disallow: /modals/
-Disallow: /fragment/
-Disallow: /*?*
-Disallow: /*?*
-
 
 
 
