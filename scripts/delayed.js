@@ -68,7 +68,8 @@ async function loadMoengage() {
 
   Moengage = moe({
     app_id: moeAppID,
-    debug_logs: debug_logs
+    debug_logs: debug_logs,
+    swPath: "/serviceworker.min.js"
   });
 
   try {
