@@ -8,6 +8,17 @@ export function validationJSFunc() {
   const checkEmptyFor = [loanProduct(), formLoanAmt(), cutomerName(), cutomerIncome(), stateInput(), branchInput(), formTc()];
   const checkDateFor = [formDobInput()];
   const checkValidPlaceFor = [stateInput(), branchInput()];
+  const checkLoanAmtFor = [formLoanAmt()];
+  const checkcustomerIncome = [cutomerIncome()];
+
+  cutomerIncome().addEventListener('input', function (e) {
+    isValidIncome(e.target);
+  })
+
+  formLoanAmt().addEventListener('input', function (e) {
+    isValidLoanAmt(e.target);
+  })
+  
 
   loanFormContainer().addEventListener('input', ({ target }) => {
     if (target.tagName != 'INPUT') return;
@@ -32,8 +43,11 @@ export function validationJSFunc() {
     const isNUmberValidations = checkNumberFor.every((input) => isValidNumber(input, target));
     const isPlaceValidations = checkValidPlaceFor.every((input) => isValidPlace(input, target));
     const isDateValidations = checkDateFor.every((input) => validateAndFormatDate(input, target));
+    const isLoanAmtValidation = checkLoanAmtFor.every((input) => isValidLoanAmt(input, target));
+    const isCustIncomeValidation = checkcustomerIncome.every((input) => isValidIncome(input, target));
+    const isDobValidation = checkDateFor.every((input) => isValidDob(input));
 
-    if (isEmptyValidations && isNUmberValidations && isPlaceValidations && isDateValidations) {
+    if (isEmptyValidations && isNUmberValidations && isPlaceValidations && isDateValidations && isLoanAmtValidation && isCustIncomeValidation && isDobValidation) {
       loanFromBtn().classList.add('loan-form-button-active');
     } else {
       loanFromBtn().classList.remove('loan-form-button-active');
@@ -94,6 +108,38 @@ function isValidNumber(input, target) {
   return mobRegex && inputValue.length == 10;
 }
 
+function isValidLoanAmt(input, target) {
+  const inputValue = input.value.replace(/,/g, '');
+  const amount = parseInt(inputValue, 10);
+
+  const loanType = document.querySelector('#form-loan-type')?.value;
+
+  const mobileErrorMsg = document.querySelector('.invalid-loanamount-msg');
+  if (loanType.trim().toLowerCase() !== 'personal loan' && input !== target) return;
+  if (amount < 100000) {
+    mobileErrorMsg.style.display = 'block';
+  } else {
+    mobileErrorMsg.style.display = 'none';
+    return true;
+  }
+}
+
+function isValidIncome(input, target) {
+  const inputValue = input.value.replace(/,/g, '');
+  const amount = parseInt(inputValue, 10);
+
+  const loanType = document.querySelector('#form-loan-type')?.value;
+
+  const mobileErrorMsg = document.querySelector('.invalid-monthlyincome-msg');
+  if (loanType.trim().toLowerCase() !== 'personal loan' && input !== target) return;
+  if (amount < 25000) {
+    mobileErrorMsg.style.display = 'block';
+  } else {
+    mobileErrorMsg.style.display = 'none';
+    return true;
+  }
+}
+
 function isValidPlace(input, target) {
   const isSelected = input.classList.contains('place-selected');
 
@@ -107,6 +153,30 @@ function isValidPlace(input, target) {
   }
 
   return isSelected;
+}
+
+export function calculateAgeFromInput(dateString) {
+  if (!dateString.includes('/')) return;
+
+  const [day, month, year] = dateString.split('/');
+  const birthDate = new Date(`${year}-${month}-${day}`);
+
+  if (isNaN(birthDate)) {
+    return;
+  }
+
+  const today = new Date();
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const m = today.getMonth() - birthDate.getMonth();
+
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+  return age;
+}
+
+function isValidDob(input) {
+  return  input.dataset.validdate == "true";
 }
 
 function validateAndFormatDate(input, target) {
@@ -125,12 +195,8 @@ function validateAndFormatDate(input, target) {
       }
 
       if (input == target) {
-        const errMsg = input.closest('.cmp-form-text-parent').querySelector('.loan-form-err');
-        if (isDate) {
-          errMsg.style.display = 'none';
-        } else {
-          errMsg.style.display = 'block';
-        }
+        const errMsg = document.querySelector('.invalid-date-msg');
+        input.dataset.validdate == "true" ? errMsg.style.display = "none" : errMsg.style.display = "block";
       }
     }
   }
