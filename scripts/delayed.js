@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-cycle
-import { fetchPlaceholders, getMetadata, sampleRUM } from './aem.js';
+import { fetchPlaceholders, getMetadata, sampleRUM } from './aem.min.js';
 
 
 
@@ -10,7 +10,7 @@ sampleRUM('cwv');
 function loadServiceWorker() {
   if ('serviceWorker' in navigator) {
     // window.addEventListener('load', () => {
-    navigator.serviceWorker.register('../scripts/serviceworker.js').then((reg) => {
+    navigator.serviceWorker.register('/serviceworker.js').then((reg) => {
       console.log('Service Worker registered.', reg);
     }).catch((err) => {
       console.log('Service Worker **not** registered', err);
