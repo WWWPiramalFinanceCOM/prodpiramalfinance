@@ -44,15 +44,14 @@ export function validationJSFunc() {
   // })
   
 
-  loanFormContainer().addEventListener('input', ({ target }) => {
-    if (target.tagName != 'INPUT') return;
+loanFormContainer().addEventListener('input', ({ target }) => {
+  if (target.tagName != 'INPUT') return;
+  if (target.dataset.valueType == 'money') {
+    let inputValue = target.value;
+    inputValue = inputValue.replace(/^0|\D/g, '');
+    target.value = currenyCommaSeperation(inputValue);
 
-    if (target.dataset.valueType == 'money') {
-      let inputValue = target.value;
-      inputValue = inputValue.replace(/^0|\D/g, '');
-      target.value = currenyCommaSeperation(inputValue);
-
-      const isPLLoan = loanProduct().dataset.loanType === "pl";
+    const isPLLoan = loanProduct().dataset.loanType === "pl";
 
     if(isPLLoan){
       if (target.id === 'form-income') {
@@ -66,10 +65,10 @@ export function validationJSFunc() {
       clearPLLoanError()
     }
 
-   // return false;
+    // return false;
   }
 
-  if (target.dataset.valueType == 'name') { 
+  if (target.dataset.valueType == 'name') {
     target.value = target.value.replace(/[^a-zA-Z ]+/g, '');
   }
 
@@ -217,7 +216,7 @@ function isValidIncome(input, target) {
   } else {
     mobileErrorMsg.style.display = 'none';
     return true;
-  }
+  } 
 }
 
 function isValidPlace(input, target) {
@@ -296,8 +295,8 @@ function isValidDate(dateString, input, target) {
 
   const isValidDate = (
     date.getFullYear() === year
-        && date.getMonth() === month
-        && date.getDate() === day
+    && date.getMonth() === month
+    && date.getDate() === day
   );
 
   if (isValidDate && (input == target)) {

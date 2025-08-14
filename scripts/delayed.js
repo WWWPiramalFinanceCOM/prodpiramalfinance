@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-cycle
-import { fetchPlaceholders, getMetadata, sampleRUM } from './aem.js';
+import { fetchPlaceholders, getMetadata, sampleRUM } from './aem.min.js';
 
 
 

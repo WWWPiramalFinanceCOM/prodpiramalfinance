@@ -1,4 +1,6 @@
+import { getMetadata } from "../../scripts/aem.js";
 export function appplyLoanTemplate(properties) {
+    properties.checkboxAnchorTextLink = getMetadata('lang-path') + properties.checkboxAnchorTextLink;
   /* const properties = {
     rupeeIcon: "/images/rupee-icon.svg",
     mainFormHeading: "Apply Loan In A Minute",
@@ -145,7 +147,7 @@ export function appplyLoanTemplate(properties) {
                                         <label for="form-text">${properties.loanAmount}<span>*</span></label>
                                         <div class="cmp-form-text-parent">
                                             <span class="rupee">₹</span>
-                                            <input class="cmp-form-text__text" type="text" data-value-type="money" id="form-loan-amount"  placeholder=""
+                                            <input class="cmp-form-text__text" type="text" data-value-type="money" id="form-loan-amount" placeholder=""
                                             autocomplete="off">
                                             <span class="loan-form-err invalid-loanamount-msg">
                                                 Minimum amount should be 1 lakh.
@@ -237,7 +239,6 @@ export function appplyLoanTemplate(properties) {
                                             <span class="arrowimage dobarrow" id="loan-form-cal-id"><img class="lozad" src="/images/calendar.png"
                                                 data-src="/images/calendar.png" alt="dobarrow">
                                             </span>
-                                            
                                             <span class="loan-form-err invalid-date-msg">
                                                 Minimum age should be 23 years.
                                             </span>
