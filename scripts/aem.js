@@ -445,6 +445,52 @@ function wrapTextNodes(block) {
     });
 }
 
+export function autoLinkLangPath(anchor) {
+    try {
+        if(anchor.href){
+            const anchorUrl = new URL(anchor.href);
+            const currentUrl = new URL(window.location.href);
+            const langPath = getMetadata('lang-path');
+    
+            const excludedPaths = [
+                '/hi/', '/mr/', '/gu/', '/te/', '/ta/',
+                '/ml/', '/kn/', '/content/', '/account/',
+                '/customer-service/', '/neeyat'
+            ];
+    
+            const excludedTexts = [
+                'english', 'हिन्दी', 'ગુજરાતી', 'मराठी',
+                'தமிழ்', 'മലയാളം', 'ಕನ್ನಡ', 'తెలుగు'
+            ];
+    
+            const anchorText = anchor.textContent.trim().toLowerCase();
+    
+            const isSameOrigin = anchorUrl.origin === currentUrl.origin;
+            const isLocalPath = anchorUrl.pathname.startsWith('/');
+            const isExcludedPath = excludedPaths.some(path => anchorUrl.pathname.includes(path));
+            const isExcludedText = excludedTexts.includes(anchorText);
+    
+            let newHref = anchor.href;
+            if (isSameOrigin && isLocalPath && !isExcludedPath && !isExcludedText) {
+                newHref = langPath + anchorUrl.pathname + anchorUrl.search;
+            } else if (isExcludedText) {
+                const pathSegments = (langPath && currentUrl.pathname.startsWith(langPath)) ? currentUrl.pathname.split('/').slice(2) :  currentUrl.pathname.split('/').slice(1);
+                if (pathSegments.length > 1) {
+                    newHref = anchorUrl.pathname  + '/' + pathSegments.join('/') + anchorUrl.search;
+                } else {
+                    newHref = langPath
+                        ? anchorUrl.pathname.split('/').slice(0, -1).join('/') + '/'+ currentUrl.pathname.split('/').slice(2).join('/') + anchorUrl.search
+                        : anchorUrl.pathname.split('/').slice(0, -1).join('/') + currentUrl.pathname + anchorUrl.search;
+                }
+                newHref = newHref.replaceAll('//' , '/');
+            }
+            anchor.href = newHref;
+        }
+    } catch (error) {
+        console.warn('autoLinkLangPath error:', error);
+    }
+}
+
 /**
  * Decorates paragraphs containing a single link as buttons.
  * @param {Element} element container element
@@ -461,6 +507,7 @@ function decorateButtons(element) {
             a.textContent = a.textContent.replace(/([?&])?rel=[^&\s]*/gi, '').replace(/[?&]$/, '');
             a.setAttribute('title', removeRelParam(a.getAttribute('title')));
         }
+        autoLinkLangPath(a);
 
         if (a.href !== a.textContent) {
             const up = a.parentElement;
@@ -679,10 +726,12 @@ function buildBlock(blockName, content) {
  * @param {Element} block The block element
  */
 export function getExtension(type) {
+    const isMinify = getMetadata('minify') === 'true'
+    // const isMinify = false
     if (type === 'js') {
-        return getMetadata('minify') === 'true' ? `.min.${extJs}` : `.${extJs}`;
+        return isMinify ? `.min.${extJs}` : `.${extJs}`;
     } else if (type === 'css') {
-        return getMetadata('minify') === 'true' ? `.min.${extCss}` : `.${extCss}`;
+        return isMinify ? `.min.${extCss}` : `.${extCss}`;
     }
 }
 

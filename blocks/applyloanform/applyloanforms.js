@@ -86,7 +86,6 @@ export function applyLoanFormClick() {
         const anchor = button.closest('a');
         if (anchor && anchor.getAttribute('href')) {
           try {
-            // console.log(e.target.innerText);
             const emiName = e.target?.closest('.section')?.querySelector('.tab-common.active p')?.textContent.trim();
             const ctaPos = e.target?.closest('.section')?.querySelector('.calculator-parent p')?.textContent.trim();
             if (e.target.innerText.trim() === 'Talk to loan expert') {
@@ -94,7 +93,6 @@ export function applyLoanFormClick() {
             } else if (e.target.innerText.trim() === 'Apply loan now') {
               applyLoanNow('calculator', emiName, ctaPos, targetObject.pageName);
             }
-            // console.log("calculator type :  ", targetObject.calculatorType);
           } catch (error) {
             console.warn(error);
           }
@@ -112,7 +110,6 @@ export function applyLoanFormClick() {
           firstformbtn.classList.remove('loader-initialized');
           loaninnerform.classList.remove('loan-form-sub-otp', 'loan-form-success', 'loan-form-request-fail', 'loan-form-something-wrong');
           try {
-            // console.log(e.target.innerText);
             const emiName = e.target?.closest('.section')?.querySelector('.tab-common.active p')?.textContent.trim();
             const ctaPos = e.target?.closest('.section')?.querySelector('.calculator-parent p')?.textContent.trim();
             if (e.target.innerText.trim() === 'Talk to loan expert') {
@@ -122,7 +119,6 @@ export function applyLoanFormClick() {
               applyLoanNow('calculator', emiName, ctaPos, targetObject.pageName);
               formInteraction(targetObject.pageName,"Form Open",targetObject.pageName)
             }
-            // console.log("calculator type :  ", targetObject.calculatorType);
           } catch (error) {
             console.warn(error);
           }
@@ -269,6 +265,7 @@ export function applyLoanFormClick() {
       firstformbtn.addEventListener('click', () => {
         loaninnerform.classList.add('loan-form-sub-otp');
         otpPhoneNum().textContent = cutomerNo().value;
+        document.querySelector('.wrongotpmessage').style.display = 'none';
         startTimer(footer_time_limit, footer_time_out);
         const timerElement = document.querySelector('.applyloanform .timer');
         if (timerElement) {
@@ -543,6 +540,7 @@ export function applyLoanFormClick() {
     // loanFormOtpBtn().addEventListener('click', () => {
     //   clearInterval(intervalTime);
     // });
+    
 
     function startTimer(footer_time_limit, footer_time_out) {
       clearInterval(footer_time_out);
