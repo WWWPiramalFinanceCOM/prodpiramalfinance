@@ -12,5 +12,5 @@ Disallow: /blocks/
 
 
 
-Sitemap: https://www.piramalfinance.com/sitemap-index.xml
+Sitemap: https://www.piramalfinance.com/en/sitemap-index.xml
 Sitemap: https://www.piramalfinance.com/sitemap-vidya.xml
