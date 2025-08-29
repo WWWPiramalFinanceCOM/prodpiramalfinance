@@ -11,7 +11,6 @@ export default async function decorate(block) {
   block.innerHTML = '';
   let customerTemplate = customerTemplateCopy; 
   const customerCard = customerCardCopy;
-  debugger;
   try {
     const resp = await fetchAPI('GET', url);
     const data = await resp.json();
