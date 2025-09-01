@@ -155,10 +155,10 @@ export function checkAllFieldValidation() {
   const loanType = document.querySelector('#form-loan-type')?.value;
 
   const loanTypeValue = loanType.trim().toLowerCase();
-  if (!['personal loan', 'loan against security', 'loan against mutual funds'].includes(loanTypeValue)) {
+  if (!['personal loan', 'loan against security', 'loan against mutual fund'].includes(loanTypeValue)) {
     return;
   }
-  const isLoanValid = ['personal loan', 'loan against security', 'loan against mutual funds'].includes(loanTypeValue)
+  const isLoanValid = ['personal loan', 'loan against security', 'loan against mutual fund'].includes(loanTypeValue)
   ? isLoanAmtValidation && isIncomeValidations
   : true;
 
@@ -216,7 +216,7 @@ function isValidLoanAmt(input, target) {
   if (
     loanType.trim().toLowerCase() !== 'personal loan' &&
     loanType.trim().toLowerCase() !== 'loan against security' &&
-    loanType.trim().toLowerCase() !== 'loan against mutual funds'
+    loanType.trim().toLowerCase() !== 'loan against mutual fund'
   ) {
     return true;
   }
@@ -241,7 +241,7 @@ function isValidIncome(input, target) {
   if (
     loanType.trim().toLowerCase() !== 'personal loan' &&
     loanType.trim().toLowerCase() !== 'loan against security' &&
-    loanType.trim().toLowerCase() !== 'loan against mutual funds'
+    loanType.trim().toLowerCase() !== 'loan against mutual fund'
   ) {
     return true;
   }
@@ -295,7 +295,7 @@ function isValidDob(input) {
   if (
     loanType.trim().toLowerCase() !== 'personal loan' &&
     loanType.trim().toLowerCase() !== 'loan against security' &&
-    loanType.trim().toLowerCase() !== 'loan against mutual funds'
+    loanType.trim().toLowerCase() !== 'loan against mutual fund'
   ) {
     return ;
   }
