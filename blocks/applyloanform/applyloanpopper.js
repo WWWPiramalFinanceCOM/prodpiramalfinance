@@ -11,7 +11,7 @@ export function validateDOBForPL() {
      const formattedDate = formDobInput()?.value;
         const dobInput = formDobInput();
         if(!loanType || !dobInput) return;
-        if (!["personal loan", "loan against security", "loan against mutual funds"].includes(loanType.trim().toLowerCase())) {
+        if (!["personal loan", "loan against security", "loan against mutual fund"].includes(loanType.trim().toLowerCase())) {
           return;
         }
         
