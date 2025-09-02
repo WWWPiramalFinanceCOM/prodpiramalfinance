@@ -1,5 +1,5 @@
 import { getMetadata } from "../../scripts/aem.js";
-import { CFApiCall, fetchAPI, getDay } from "../../scripts/scripts.js";
+import { CFApiCall, fetchAPI, getDay } from "../../scripts/common.js";
 
 export const setLocationObj = {
   getExcelData: null,
@@ -290,14 +290,14 @@ function nearBLBreadCrumb() {
   const separator = `<span class="breadcrumb-separator">${separatorSVG}</span>`;
 
   const breadcrumbItems = [
-    `<a href="${getMetadata("primary-language-path")}/branch-locator/${newState}">${newSetState}</a>`,
+    `<a href="${getMetadata("lang-path")}/branch-locator/${newState}">${newSetState}</a>`,
   ];
 
   if (newCity == newLocation) {
-    breadcrumbItems.push(`<a href="/branch-locator/${newState}/${newCity}">${newSetCity}</a>`);
+    breadcrumbItems.push(`<a href="${getMetadata("lang-path")}/branch-locator/${newState}/${newCity}">${newSetCity}</a>`);
   }else if (newCity !== newLocation) {
-    breadcrumbItems.push(`<a href="/branch-locator/${newState}/${newCity}">${newSetCity}</a>`);
-    breadcrumbItems.push(`<a href="/branch-locator/loans-in-${newLocation}-${newCity}-${newState}-${locationcode}">${newSetLocation}</a>`);
+    breadcrumbItems.push(`<a href="${getMetadata("lang-path")}/branch-locator/${newState}/${newCity}">${newSetCity}</a>`);
+    breadcrumbItems.push(`<a href="${getMetadata("lang-path")}/branch-locator/loans-in-${newLocation}-${newCity}-${newState}-${locationcode}">${newSetLocation}</a>`);
   }
 
   const breadCrumb = breadcrumbItems.join(separator);

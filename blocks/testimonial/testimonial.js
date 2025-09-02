@@ -1,4 +1,4 @@
-import { fetchAPI, getProps, renderHelper } from '../../scripts/scripts.js';
+import { fetchAPI, getProps, renderHelper } from '../../scripts/common.js';
 import { customerTemplateCopy, customerCardCopy } from './template.js';
 
 export default async function decorate(block) {
@@ -9,8 +9,8 @@ export default async function decorate(block) {
   const [url, time, ribbononeimg, ribbontwoimg, ribbonthreeimg, ribbonfourimg, classess] = props;
   block.classList.add(classess);
   block.innerHTML = '';
-  let customerTemplate = customerTemplateCopy; const
-    customerCard = customerCardCopy;
+  let customerTemplate = customerTemplateCopy; 
+  const customerCard = customerCardCopy;
   try {
     const resp = await fetchAPI('GET', url);
     const data = await resp.json();

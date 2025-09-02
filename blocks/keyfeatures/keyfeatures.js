@@ -1,6 +1,7 @@
 import { ctaClick, ctaClickInteraction, keyFeaturesInteraction } from '../../dl.js';
-import { fetchPlaceholders } from '../../scripts/aem.js';
-import { decoratePlaceholder, renderHelper, targetObject } from '../../scripts/scripts.js';
+import { autoLinkLangPath, fetchPlaceholders } from '../../scripts/aem.js';
+import { decoratePlaceholder, targetObject } from '../../scripts/scripts.js';
+import { renderHelper } from '../../scripts/common.js';
 
 export default async function decorate(block) {
   block.innerHTML = await decoratePlaceholder(block);
@@ -306,6 +307,7 @@ function keyFeaturesAnalytics(block) {
   eventCallArray.push(teaserLink);
   eventCallArray.push(redirectionButton);
   eventCallArray.forEach((eachEvent) => {
+    autoLinkLangPath(eachEvent);
     eachEvent.addEventListener('click', (e) => {
       const data = {};
       data.click_text = e.target.closest('.cmp-teaser')?.querySelector('.cmp-teaser__content p')?.textContent.trim();

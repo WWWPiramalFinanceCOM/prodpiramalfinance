@@ -1,7 +1,6 @@
 import { ctaClickInteraction } from '../../dl.js';
-import {
-  createButton, createCarousle, getProps, targetObject,
-} from '../../scripts/scripts.js';
+import { targetObject } from '../../scripts/scripts.js';
+import { createButton, createCarousle, getProps } from '../../scripts/common.js';
 import Glider from '../carousel/glider.js';
 
 export default function decorate(block) {
@@ -143,12 +142,20 @@ export default function decorate(block) {
     document.body.style.overflow = 'auto';
   });
 
-  setTimeout(() => {
+  document.addEventListener('load-event', () => {
     block.querySelector('.tab-link ul').scroll({
       left: block.querySelector('.tab-link ul li strong').getBoundingClientRect().left - block.querySelector('.tab-link ul li').getBoundingClientRect().width - 45,
       behavior: 'smooth',
     });
-  }, 100);
+  }
+  )
+  // setTimeout(() => {
+  //   block.querySelector('.tab-link ul').scroll({
+  //     left: block.querySelector('.tab-link ul li strong').getBoundingClientRect().left - block.querySelector('.tab-link ul li').getBoundingClientRect().width - 45,
+  //     behavior: 'smooth',
+  //   });
+  // }, 100);
+
 
   try {
     if (block.closest('.section.company-details-wrapper') && block.querySelector('.compony-details')) {
@@ -163,4 +170,13 @@ export default function decorate(block) {
   } catch (error) {
     console.warn(error);
   }
+
+  // document.addEventListener('load-event', hoverhandler);
+  // // document.removeEventListener('load-event', hoverhandler);
+  // function hoverhandler() {
+  //   block.querySelector('.tab-link ul').scroll({
+  //     left: block.querySelector('.tab-link ul li strong').getBoundingClientRect().left - block.querySelector('.tab-link ul li').getBoundingClientRect().width - 45,
+  //     behavior: 'smooth',
+  //   });
+  // }
 }

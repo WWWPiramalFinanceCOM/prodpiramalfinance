@@ -1,7 +1,10 @@
 import {
   applyLoanNow, bannerClick, ctaClick, ctaClickInteraction, readMoreInteraction,
 } from '../../dl.js';
-import { targetObject, handleOpenFormOnClick } from '../../scripts/scripts.js';
+import { getMetadata } from '../../scripts/aem.js';
+import { targetObject } from '../../scripts/scripts.js';
+
+import { handleOpenFormOnClick } from '../applyloanform/applyloanforms.js';
 
 export function decorateButtons(...buttons) {
   return buttons
@@ -190,7 +193,7 @@ export function generateTeaserDOM(props, classes) {
         }
         /* About Us Comapny Analytics End */
 
-        location.href = firstCta.innerText;
+        location.href = getMetadata('lang-path') + firstCta.innerText;
       });
     }
   } catch (error) {

@@ -444,6 +444,70 @@ function wrapTextNodes(block) {
         }
     });
 }
+export function addRefAttribute(a) {
+    try {
+        if (a.hasAttribute('href') && a.href.includes('rel=')) {
+            a.setAttribute('rel', getRelParam(a));
+            // console.log('a :: ', a);
+            a.setAttribute('href', removeRelParam(a));
+            a.textContent = a.textContent.replace(/([?&])?rel=[^&\s]*/gi, '').replace(/[?&]$/, '');
+            a.setAttribute('title', a.getAttribute('title'));
+        }
+    } catch (error) {
+        console.warn(error);
+    }
+}
+export function autoLinkLangPaths(anchors) {
+    Array.from(anchors).forEach(function (anchor) {
+        autoLinkLangPath(anchor);
+    })
+}
+export function autoLinkLangPath(anchor) {
+    try {
+        if(anchor.href){
+            addRefAttribute(anchor);
+            const anchorUrl = new URL(anchor.href);
+            const currentUrl = new URL(window.location.href);
+            const langPath = getMetadata('lang-path');
+    
+            const excludedPaths = [
+                '/hi/', '/mr/', '/gu/', '/te/', '/ta/',
+                '/ml/', '/kn/', '/content/', '/account/',
+                '/customer-service/', '/neeyat'
+            ];
+    
+            const excludedTexts = [
+                'english', 'हिन्दी', 'ગુજરાતી', 'मराठी',
+                'தமிழ்', 'മലയാളം', 'ಕನ್ನಡ', 'తెలుగు'
+            ];
+    
+            const anchorText = anchor.textContent.trim().toLowerCase();
+    
+            const isSameOrigin = anchorUrl.origin === currentUrl.origin;
+            const isLocalPath = anchorUrl.pathname.startsWith('/');
+            const isExcludedPath = excludedPaths.some(path => anchorUrl.pathname.includes(path));
+            const isExcludedText = excludedTexts.includes(anchorText);
+    
+            let newHref = anchor.href;
+            if (isSameOrigin && isLocalPath && !isExcludedPath && !isExcludedText) {
+                newHref = langPath + anchorUrl.pathname + anchorUrl.search;
+            } else if (isExcludedText) {
+                const pathSegments = (langPath && currentUrl.pathname.startsWith(langPath)) ? currentUrl.pathname.split('/').slice(2) :  currentUrl.pathname.split('/').slice(1);
+                if (pathSegments.length > 1) {
+                    newHref = anchorUrl.pathname  + '/' + pathSegments.join('/') + anchorUrl.search;
+                } else {
+                    newHref = langPath
+                        ? anchorUrl.pathname.split('/').slice(0, -1).join('/') + '/'+ currentUrl.pathname.split('/').slice(2).join('/') + anchorUrl.search
+                        : anchorUrl.pathname.split('/').slice(0, -1).join('/') + currentUrl.pathname + anchorUrl.search;
+                }
+                newHref = newHref.replaceAll('//' , '/');
+            }
+            anchor.href = newHref;
+        }
+    } catch (error) {
+        console.warn('autoLinkLangPath error:', error);
+    }
+}
 
 /**
  * Decorates paragraphs containing a single link as buttons.
@@ -454,13 +518,8 @@ function decorateButtons(element) {
         a.title = a.title || a.textContent;
 
         // Clean Rel from href
-        if (a.hasAttribute('href') && a.href.includes('rel=')) {
-            a.setAttribute('rel', getRelParam(a.href));
-            // console.log('a :: ', a);
-            a.setAttribute('href', removeRelParam(a.getAttribute('href')));
-            a.textContent = a.textContent.replace(/([?&])?rel=[^&\s]*/gi, '').replace(/[?&]$/, '');
-            a.setAttribute('title', removeRelParam(a.getAttribute('title')));
-        }
+        
+        autoLinkLangPath(a);
 
         if (a.href !== a.textContent) {
             const up = a.parentElement;
@@ -493,18 +552,18 @@ function decorateButtons(element) {
     });
 }
 
-export function removeRelParam(url) {
+export function removeRelParam(a) {
     try {
-        const parsedUrl = new URL(url);
+        const parsedUrl = new URL(a.href);
         parsedUrl.searchParams.delete('rel');
         return parsedUrl.toString();
     } catch (e) {
         return url; // If not a valid URL, return as is
     }
 };
-export function getRelParam(url) {
+export function getRelParam(a) {
     try {
-        const parsedUrl = new URL(url);
+        const parsedUrl = new URL(a.href);
         return parsedUrl.searchParams.get('rel');
     } catch (e) {
         return url; // If not a valid URL, return as is
@@ -679,10 +738,12 @@ function buildBlock(blockName, content) {
  * @param {Element} block The block element
  */
 export function getExtension(type) {
+    const isMinify = getMetadata('minify') === 'true'
+    // const isMinify = false
     if (type === 'js') {
-        return getMetadata('minify') === 'true' ? `.min.${extJs}` : `.${extJs}`;
+        return isMinify ? `.min.${extJs}` : `.${extJs}`;
     } else if (type === 'css') {
-        return getMetadata('minify') === 'true' ? `.min.${extCss}` : `.${extCss}`;
+        return isMinify ? `.min.${extCss}` : `.${extCss}`;
     }
 }
 

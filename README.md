@@ -2,8 +2,8 @@
 Your project's description...
 
 ## Environments
-- Preview: https://main--prodpiramalfinance--WWWPiramalFinanceCOM.hlx.page/
-- Live: https://main--prodpiramalfinance--WWWPiramalFinanceCOM.hlx.live/
+- Preview: https://main--prodpiramalfinance--WWWPiramalFinanceCOM.aem.page/
+- Live: https://main--prodpiramalfinance--WWWPiramalFinanceCOM.aem.live/
 
 ## Installation
 

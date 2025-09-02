@@ -1,5 +1,6 @@
 import { ctaClickInteraction } from '../../dl.js';
-import { fetchAPI, getProps, renderHelper } from '../../scripts/scripts.js';
+import { getMetadata } from '../../scripts/aem.js';
+import { fetchAPI, getProps, renderHelper } from '../../scripts/common.js';
 
 export default async function decorate(block) {
   const [url] = getProps(block);
@@ -17,7 +18,7 @@ export default async function decorate(block) {
       return 0;
     }),
     `<div class="forName">
-        <li><a href="{url}" title="{text}">{text}</a></li>    
+        <li><a href="${getMetadata('lang-path')}{url}" title="{text}">{text}</a></li>    
     </div>`,
   );
   block.innerHTML = `<ul>${li}</ul>`;

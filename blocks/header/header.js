@@ -1,6 +1,7 @@
 import { headerInteraction, navlogin } from '../../dl.js';
-import { fetchPlaceholders, getMetadata } from '../../scripts/aem.js';
-import { body, targetObject } from '../../scripts/scripts.js';
+import { autoLinkLangPath, fetchPlaceholders, getMetadata } from '../../scripts/aem.js';
+import { targetObject } from '../../scripts/scripts.js';
+import { body } from '../../scripts/common.js';
 import { loadFragment } from '../fragment/fragment.js';
 
 // media query match that indicates mobile/tablet width
@@ -26,8 +27,8 @@ const wrapListUE = (navSection) => {
       subSection.prepend(p2);
     } else if (
       subSection.lastElementChild
-            && subSection.lastElementChild.tagName !== 'UL'
-            && subSection.lastElementChild.tagName !== 'P'
+      && subSection.lastElementChild.tagName !== 'UL'
+      && subSection.lastElementChild.tagName !== 'P'
     ) {
       p2.append(...subSection.childNodes);
       subSection.prepend(p2);
@@ -228,6 +229,7 @@ export default async function decorate(block) {
   a.append(image);
   a.setAttribute('href', '/');
   navBrand.append(a);
+  autoLinkLangPath(a);
   navBrand.replaceChild(a, navBrand.firstElementChild);
   let loginFlag = true;
   const navSections = nav.querySelector('.nav-sections');

@@ -2,7 +2,7 @@ Please always provide the [GitHub issue(s)](../issues) your PR is for, as well a
 
 Fix #<gh-issue-id>
 
-Test URLs:
 
-- Before: https://main--prodpiramalfinance--WWWPiramalFinanceCOM.aem.live/
-- After: https://<branch>--prodpiramalfinance--WWWPiramalFinanceCOM.aem.live/
+Test URLs:
+- Before: https://main--prodpiramalfinance--wwwpiramalfinancecom.aem.live/
+- After: https://<branch>--prodpiramalfinance--wwwpiramalfinancecom.aem.live/

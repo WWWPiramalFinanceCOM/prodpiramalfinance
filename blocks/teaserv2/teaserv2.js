@@ -1,5 +1,7 @@
 import { ctaClick, ctaClickInteraction } from '../../dl.js';
-import { renderHelper, targetObject } from '../../scripts/scripts.js';
+import { autoLinkLangPath } from '../../scripts/aem.js';
+import { targetObject } from '../../scripts/scripts.js';
+import { renderHelper } from '../../scripts/common.js';
 import { loanProductsAnalytics } from './teaserv2-analytics.js';
 
 export default async function decorate(block) {
@@ -113,6 +115,7 @@ export function renderTeaserHTMLFactory(props, block) {
 
   if (container.tagName === 'A') {
     container.append(bgImageDiv);
+    autoLinkLangPath(container);
   }
 
   /* if (container.tagName === "A" && container.href !== '') {
