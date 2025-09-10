@@ -334,8 +334,9 @@ async function loadPage() {
   const templateName = getMetadata('template');
   if (templateName) {
     await loadTemplate(document, templateName);
+  }else{
+    await loadingCustomCss();
   }
-  await loadingCustomCss();
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
