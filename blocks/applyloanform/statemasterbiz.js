@@ -130,11 +130,13 @@ function  renderStatemaster(statemaster) {
 function renderCities(state) {
   const ul = brachDropDownUl();
 
-  const isProduct = loanProduct().value.trim() != '';
-  const product = loanProduct().dataset.loanType;
-  const allowedtype = ['pl', 'las', 'lamf'].includes(product);
+  // const isProduct = loanProduct().value.trim() != '';
+  // const product = loanProduct().dataset.loanType;
+  // const allowedtype = ['pl', 'las', 'lamf'].includes(product);
+  const statemaster = statemasterDataMap.get('statemasterGlobal');
 
-  const cities = (isProduct && !allowedtype ? productStatemaster[state]?.cities : statemasterGlobal[state]?.cities) || [];
+  // const cities = (isProduct && !allowedtype ? productStatemaster[state]?.cities : statemasterGlobal[state]?.cities) || [];
+  const cities = (statemaster[state]?.cities) || [];
   const fragment = cities.length > 0 ? renderHelper(cities, 'form-branch-city', 'Cities') : renderHelper(cities, 'form-branch-city', 'No options');
   ul.replaceChildren(fragment);
 
